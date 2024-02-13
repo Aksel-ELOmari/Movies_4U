@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	<link rel="stylesheet" href="./css/bootstrap.css">
+	<link rel="stylesheet" href="./css/index.css">
+	<title>Movies_4U Home Page</title>
+</head>
+<!-- <body class="Dark_Mood"> -->
+<body>
+	 <header>
+		<!-- ------------- bootstrap nav bar Start---------------- -->
+		<nav class="navbar navbar-expand-lg bg-body-tertiary" style="overflow: visible;">
+			<div class="container-fluid nav-Barholder">
+				<a class="navbar-brand me-lg-5 ms-xl-5" href="#home" style="z-index: 7;">Movies<b style="color: orangered;">_4U</b></a>
+				<button class="navbar-toggler m-0 p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link " aria-current="page" href="#">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#section_1">New</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#section_2">Popular</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" target="_blank" href="./Series.html">TvShows</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" target="_blank" href="./Anime.html">Anime/Animation</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" target="_blank" href="./Arab.html">Arabic</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" target="_blank" href="about.html">About Us</a>
+						</li>
+					</ul>
+				</div>
+				<div class="nav-bar-icons d-flex align-center justify-content-center">
+					<div  class="nav-Regestration-btn nav-link me-1 px-4">
+						Login
+					</div>
+					<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+						<i class="fa-solid fa-ellipsis-vertical"></i>
+					</button>
+				</div>
+			</div>
+		</nav>
+		<!-- <Top-navBar></Top-navBar> -->
+		<!-- ------------- bootstrap nav bar End---------------- -->
+		<!-- <video autoplay muted loop id="background_Video" name="background_Video" src="../MoviesTrailers/BLACK MIRROR Season 4 Official Trailer (2017) Netflix Series HD(1080P_HD).mp4"></video> -->
+		<img src="" alt="" id="background_Cover">
+		<div class="container py-3">
+			<div class="SearchBar col-12 SearchBar-Smallsize" style="border-radius: 20px;margin-bottom: 20px;">
+				<label class="d-flex align-items-center " role="search" style="height: 40px;z-index: 5;">
+					<input class="form-control me-2" id="searchInput" type="search" placeholder="Enter A Movie Name...md"
+					aria-label="Search" style="border-radius: 20px;min-width:350px;">
+					<button class="btn btn-outline-success searchBtn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+					<div class="User_Profile me-md-5">
+						<img src="../MoviesImage/A wounded fawn.jpeg" alt="" id="userCover">
+					</div>
+				</label>
+				<div class="SearchResults ps-2 d-none" name="SearchResults"></div>
+			</div>
+            <div class="row d-flex align-items-center justify-content-around">
+				<div class="col-lg-6">
+					<h2 id="Movies_Title" name="Movies_Title">INTERSTELLER</h2>
+					<div class="Caracters my-3 d-flex align-items-center gap-3"  style="color: var(--text-color--);">
+						<span id="Type">Movie</span>
+						<span id="Genre">Action</span>
+						<span  id="Released_date" id="Date">2023</span>
+						<span id="Rate" style="color: yellow;">9.5<i class="fa-solid fa-star"></i></span>
+						<span id="Dur" style="color: green;">189<i class="fab fa-time"></i></span>
+						<span id="Comp">Netfilex</span>
+					</div>
+					<div class="Description mb-2 w-100">
+						<p class="my-1 AboutMovie" id="TopOveriew" style="color: var(--text-color--);">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nisi itaque maxime quasi rerum porro ullam esse fugiat, cupiditate animi!
+						</p>
+					</div>
+					<div class="buttons">
+						<button class="btn btn-outline-danger" onclick="WatchTime(Movie_Video,Movies_Title,Released_date)">Watch <i class="fa-solid fa-film"></i></button>
+						<button class="btn btn-outline-danger" onclick="Trailer(background_Video,Movies_Title)">Trailer <i class="fa-regular fa-circle-play"></i></button>
+						<button class="btn btn-outline-danger" onclick="Download_Movies(Movie_Video)"><a id="download-btn">Download <i class="fa-regular fa-circle-down"></i></a></button>
+					</div>
+				</div>
+				<div class="col-lg-4 py-4" >
+					<div class="img-holder">
+						<img src="../MoviesImage/photo_6_2024-01-21_20-55-45.jpg" alt="" id="Movie-Topimg">
+						<!-- <img src="" alt="" id="Movie-Topimg">-->
+						<video src="../MoviesTrailers/Better Call Saul Season 4 Comic-Con Trailer _ Rotten Tomatoes TV(1080P_HD).mp4" id="background_Video" class="d-none" name="background_Video"></video>
+						<video src="../MovisVideosEdites/This trailer is amazing --__•__•__c _ awaykenn (tt)___kungfupanda4 _kungfupanda _po _tailung _mastershifu _dreamworks _cartoon _edit _fyp _fypシ _viral _parati(MP4).mp4" id="Movie_Video" class="d-none" name="Movie_Video"></video>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+   <!-- ------------------ 	Offcanvas side Bar Start  ----------------- -->
+	<div class="offcanvas offcanvas-start" id="demo">
+		<div class="offcanvas-header" style="border-bottom: solid 1px #333;">
+		  <h1 class="offcanvas-title"  href="#home">Movies<b style="color: orangered;">_4U</b></h1>
+		  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+		</div>
+		<div class="offcanvas-body">
+		    <div class="UserSection">
+				<div class="offcanvas-tag">
+					<i class="fa-regular fa-user"></i>
+					My Acount
+				</div>
+				<div class="offcanvas-tag">
+					<i class="fa-regular fa-heart"></i>
+					Favourites
+				</div>
+				<div class="offcanvas-tag">
+					<i class="fa-solid fa-chart-line"></i>
+					Time Line
+				</div>
+				<div class="offcanvas-tag">
+					<i class="fa-solid fa-clock-rotate-left"></i>
+					Watch Later
+				</div>
+				<div class="offcanvas-tag">
+					<i class="fa-solid fa-hourglass-half"></i>
+					Didn't finish yet
+				</div>
+				<i class="fa-brands fa-twitter"></i>
+				<i class="fa-solid fa-download"></i>
+				<i class="fa-brands fa-instagram"></i>
+				<i class="fa-solid fa-envelope"></i>
+				<i class="fa-brands fa-github"></i>
+				<i class="fa-regular fa-thumbs-up"></i>
+				<i class="fa-solid fa-people-group"></i>
+				<i class="fa-solid fa-exclamation"></i>
+			</div>
+			<hr>
+		   <div class="second">
+			  <h4 style="color: rgb(245, 109, 4);font-weight: bold;font-size: 18px;">CATEGORIES:</h4>
+			  <div class="offcanvas-tags"></div>
+		   </div>
+		</div>
+	</div>
+	<!-- ------------------ 	Offcanvas side Bar Start  ----------------- -->
+	<!-- ---------  Start Download Section---- ------- -->
+	<section id="Downlad-WatchBar" class="bg-dark d-none">
+		<div class="container" >
+			<div class="ExitBtn">
+				<span id="X-Btn" onclick="document.getElementById('Downlad-WatchBar').style.display = 'none'">X</span>
+			</div>
+			<h5 class="IframContent_Title" style="font-size: 16px;color: orange;font-weight: bolder">Antlers</h5>
+		   <video src="" class="VideoShower" controls autoplay muted loop class="col-12" id="IframeWatchBar"></video>
+		</div>
+	</section>
+	<!-- ---------  End Download Section   ----------- -->
+	<!-- --------- Start Regestration Section   ----------- -->
+	 <scetion class="d-none Regestartion-section">
+		<div class="UserRegestartionSite">
+			<div class="Regestration-Body" style="position: relative;">
+				<span class=" d-flex align-items-center justify-content-center" id="Skip_Reg">X</span>
+				<div class="row">
+					<div class="col-12 col-md-5 image-side">
+						<img src="../MoviesImage/photo_6_2024-01-21_20-55-45.jpg" id="Sing-img-cover" alt="">  <!-- ? this src img for Movies -->
+						<!-- <img src="./photo_9_2024-01-21_20-55-45.jpg" id="Sing-img-cover" alt="">  ? this src img for Anime --> 
+					</div>
+					<div class="col-12 col-md-7 form-side">
+						<div class="form-header">
+							<div class="h3 my-3 logo-Regester"><h2 style="color: #fff;">Movies<b style="color: orangered;">_4U</b></h3></div>
+						</div>
+                    <div class="Regester" id="Login-Task">
+						<form action="#">
+							<div class="row">
+								<div class="col-12 col-name">
+									<input type="text" placeholder="User Name" name="" id="">
+								</div>
+								<div class="col-12 col-email">
+									<input type="email" placeholder="Email" name="" id="">
+								</div>
+								<div class="col-12 col-password">
+									<input type="password" name="" placeholder="Password" id="">
+								</div>
+								<div class="col-12 input-sumbit">
+									<input type="submit" id="Regestration-Submitbtn" value="Login">
+								</div>
+							</div>
+							<div class="forgaten-Sing-Up">
+								<p class="p-forgate">Have you forgate the password <a href="#" style="text-decoration: none;color: orange;font-weight: 500;">Reset</a></p>
+								<p class="p-Sing-Up">Don't Have Acount <button style="text-decoration: none;color: orangered;font-weight: 500;border: 0;outline: 0;background: transparent;" onclick="RegestarationTasks()">Sing Up</button></p>
+							</div>
+						</form>
+						<div class="Login-SocialAcounts text-center text-align-center">
+							<p class="text text-center">or Login with</p>
+							<div class="row">
+								<div class="col-12 Other-Device">
+									<a href="facebok">facebok</a>
+								</div>
+								<div class="col-12 Other-Device">
+									<a href="Google">Google</a>
+								</div>
+								<div class="col-12 Other-Device">
+									<a href="Git hube">Git hube</a>
+								</div>
+							</div>
+						</div>
+					</div> 
+
+					<div class="Regester" id="SingUp-Task" style="display: none;">
+						<form action="#">
+							<div class="row">
+								<div class="col-6 col-name">
+									<input type="text" placeholder="User Name" name="" id="">
+								</div>
+								<div class="col-6 col-email">
+									<input type="email" placeholder="Email" name="" id="">
+								</div>
+								<div class="col-6 col-password">
+									<input type="password" name="" placeholder="Password" id="">
+								</div>
+								<div class="col-6 col-password">
+									<input type="password" name="" placeholder="Conferm Your Password" id="">
+								</div>
+							</div>
+							<p class="RememberUser">
+								<input type="checkbox" name="RemeberUser" id="check-RemeberUser">
+								<label style="color: #fff;">Remember me</label>
+							</p>
+							<div class="input-sumbit">
+								<input type="submit" id="Regestration-Submitbtn" value="Sing Up">
+							</div>
+							<div class="forgaten-Sing-Up">
+								<p class="p-forgate">Have you forgate the password <a href="#" style="text-decoration: none;color: orange;font-weight: 500;">Reset</a></p>
+								<p class="p-Sing-Up">Already Have Acount <a href="#" style="text-decoration: none;color: orangered;font-weight: 500;" onclick="RegestarationTasks()">Login</a></p>
+							</div>
+						</form>
+						<div class="Login-SocialAcounts">
+							<p class="text text-center">or Sing up with</p>
+							<div class="row">
+								<div class="col-12 Other-Device">
+									<a href="facebok">facebok</a>
+								</div>
+								<div class="col-12 Other-Device">
+									<a href="Google">Google</a>
+								</div>
+								<div class="col-12 Other-Device">
+									<a href="Git hube">Git hube</a>
+								</div>
+							</div>
+						</div>
+				    </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	 </scetion>
+	<!-- --------- End Regestration Section   ----------- -->
+	<!-- ? => -------  Start  Movies Slider   -------- -->
+	<movies-slider>
+	<div class="container Movies_Slider Slider-1 my-4">
+		<h5>Related Content :</h5>
+		<div class="Cards-Holder " id="Related_Content">
+			<div class="Card" class="Related_Card">
+				<img src="../MoviesImage/Banshee -1.jpeg" id="RelatedPoster" alt="">
+				<img src="../MoviesImage/photo_3_2024-01-21_20-55-45.jpg" id="RelatedCover" alt="">
+				<div class="Data">
+					<h4 id="RelatedCard_Title" style="color: orangered;">Banshee</h4>
+					<div class="Details">
+						<span id="Type">Movies</span>
+						<span id="Genre">Action</span>
+						<span id="Date">2023</span>
+						<span id="Rate" style="color: yellow;">9.5<i class="fa-solid fa-star"></i></span>
+						<span id="Dur" style="color: green;">189<i class="fa-solid fa-clock"></i></span>
+						<span id="Comp">Netfilex</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="buttons">
+			<span class="Left_btn"><</span>
+			<span class="Right_btn">></span>
+		</div>
+	</div>
+	</movies-slider>
+	<!-- ? <= -------  End  Movies Slider    -------- -->
+	<section id="section_1" class="section_1" id="New">
+		<h2 class="Section_title">Last Relased :</h2>
+		<div id="Last_Relased" class="Cards_Holder d-flex f-wrap">
+			<div class="Card">
+			    <img id="Card_Poster" src="../MoviesImage/antlers.jpeg">
+				<img class="backdrop_path d-none" src="../MoviesImage/antlers.jpeg" alt="${element.title}">
+				<video class="d-none" autoplay muted loop src="../MoviesTrailers/ANTLERS _ Final Trailer [HD] _ Searchlight Pictures(1080P_HD).mp4" id="RelatedCover"></video>
+				<div class="Data">
+					<h4 id="Card_Title" style="color: orangered;">Antlers</h4>
+					<div class="Details">
+						<span id="Type">Movies</span>
+						<span id="Genre">Action</span>
+						<span id="Date">2023</span>
+						<span id="Rate" style="color: yellow;">8.4<i class="fab fa-star"></i></span>
+						<span id="Dur" style="color: green;">198<i class="fab fa-time"></i></span>
+						<span class="CompanyName d-none" id="Comp">Netfilex</span>
+					</div>
+					<p class="Movie-Overview d-none">lorem<p>
+			   </div>
+			</div>
+			<div class="Card">
+				<img id="Card_Poster" src="../MoviesImage/Banshee -1.jpeg">
+				<img class="backdrop_path d-none" src="../MoviesImage/Banshee -b.jpeg" alt="${element.title}">
+				<video class="d-none" autoplay muted loop src="../MoviesTrailers/ANTLERS _ Final Trailer [HD] _ Searchlight Pictures(1080P_HD).mp4" id="RelatedCover"></video>
+				<div class="Data">
+					<h4 id="Card_Title" style="color: orangered;">Banshee</h4>
+					<div class="Details">
+						<span id="Type">Movies</span>
+						<span id="Genre">Action</span>
+						<span id="Date">2023</span>
+						<span id="Rate" style="color: yellow;">8.4<i class="fab fa-star"></i></span>
+						<span id="Dur" style="color: green;">198<i class="fab fa-time"></i></span>
+						<span class="CompanyName d-none" id="Comp">Netfilex</span>
+					</div>
+					<p class="Movie-Overview d-none">lorem<p>
+			   </div>
+			</div>
+			<div class="Card">
+				<img id="Card_Poster" src="../MoviesImage/spider men Acros the spider verse -1.jpeg">
+				<img class="backdrop_path d-none" src="../MoviesImage/spider men Acros the spider verse -1.jpeg" alt="${element.title}">
+				<video class="d-none" autoplay muted loop src="../MoviesTrailers/ANTLERS _ Final Trailer [HD] _ Searchlight Pictures(1080P_HD).mp4" id="RelatedCover"></video>
+				<div class="Data">
+					<h4 id="Card_Title" style="color: orangered;">spider men Acros the spider verse</h4>
+					<div class="Details">
+						<span id="Type">Movies</span>
+						<span id="Genre">Action</span>
+						<span id="Date">2023</span>
+						<span id="Rate" style="color: yellow;">8.4<i class="fab fa-star"></i></span>
+						<span id="Dur" style="color: green;">198<i class="fab fa-time"></i></span>
+						<span class="CompanyName d-none" id="Comp">Netfilex</span>
+					</div>
+					<p class="Movie-Overview d-none">lorem<p>
+			   </div>
+			</div>
+			<div class="Card"></div>
+			<div class="Card"></div>
+			<div class="Card"></div>
+		</div>
+		<div class="Navigation-hlder">
+			<nav aria-label="Page navigation justify-content center">
+			   <ul class="pagination">
+			   <li class="page-item Previus-page" onclick="minusPageNumber()">
+				  <a class="page-link" href="#" aria-label="Previous">
+					 <span aria-hidden="true">&laquo;</span>
+				  </a>
+			   </li>
+			   <li class="page-item Curent-page"><a class="page-link" href="#">1</a></li>
+			   <li class="page-item"><a class="page-link" href="#">2</a></li>
+			   <li class="page-item"><a class="page-link" href="#">3</a></li>
+			   <li class="page-item"><a class="page-link" href="#">4</a></li>
+			   <li class="page-item"><a class="page-link" href="#">5</a></li>
+			   <li class="page-item"><a class="page-link" href="#">6</a></li>
+			   <li class="page-item"><a class="page-link" href="#">7</a></li>
+			   <li class="page-item"><a class="page-link" href="#">8</a></li>
+			   <li class="page-item"><a class="page-link" href="#">9</a></li>
+			   <li class="page-item"><a class="page-link" href="#">10</a></li>
+			   <li class="page-item Next-page" onclicl="plusPageNumber()">
+				  <a class="page-link" href="#" aria-label="Next">
+					 <span aria-hidden="true">&raquo;</span>
+				  </a>
+			   </li>
+			   </ul>
+			</nav>
+		</div>
+	</section>
+	<section id="section_2" class="section_1 Most-Popular">
+		<h2 class="Section_title">Most Popular</h2>
+		<div id="Most-Popular" id="Most_Popular" class="Cards_Holder d-flex f-wrap"></div>
+		<div class="Navigation-hlder">
+			<nav aria-label="Page navigation justify-content center">
+				<ul class="pagination">
+				<li class="page-item Previus-page">
+					<a class="page-link" href="#" aria-label="Previous">
+						<span aria-hidden="true">&laquo;</span>
+					</a>
+				</li>
+				<li class="page-item Curent-page"><a class="page-link" href="#">1</a></li>
+				<li class="page-item"><a class="page-link" href="#">2</a></li>
+				<li class="page-item"><a class="page-link" href="#">3</a></li>
+				<li class="page-item"><a class="page-link" href="#">4</a></li>
+				<li class="page-item"><a class="page-link" href="#">5</a></li>
+				<li class="page-item"><a class="page-link" href="#">6</a></li>
+				<li class="page-item"><a class="page-link" href="#">7</a></li>
+				<li class="page-item"><a class="page-link" href="#">8</a></li>
+				<li class="page-item"><a class="page-link" href="#">9</a></li>
+				<li class="page-item"><a class="page-link" href="#">10</a></li>
+				<li class="page-item Next-page">
+					<a class="page-link" href="#" aria-label="Next">
+						<span aria-hidden="true">&raquo;</span>
+					</a>
+				</li>
+				</ul>
+			</nav>
+		</div>
+	</section>
+	<section id="section_3" class="section_2 Series-TVShows">
+		<h2 class="Section_title">Series & TVShows :</h2>
+		<div id="Series-TVShows" class="Cards_Holder d-flex f-wrap"></div>
+		<div class="Navigation-hlder">
+			<nav aria-label="Page navigation justify-content center">
+			   <ul class="pagination">
+			   <li class="page-item Previus-page">
+				  <a class="page-link" href="#" aria-label="Previous">
+					 <span aria-hidden="true">&laquo;</span>
+				  </a>
+			   </li>
+			   <li class="page-item Curent-page"><a class="page-link" href="#">1</a></li>
+			   <li class="page-item"><a class="page-link" href="#">2</a></li>
+			   <li class="page-item"><a class="page-link" href="#">3</a></li>
+			   <li class="page-item"><a class="page-link" href="#">4</a></li>
+			   <li class="page-item"><a class="page-link" href="#">5</a></li>
+			   <li class="page-item"><a class="page-link" href="#">6</a></li>
+			   <li class="page-item"><a class="page-link" href="#">7</a></li>
+			   <li class="page-item"><a class="page-link" href="#">8</a></li>
+			   <li class="page-item"><a class="page-link" href="#">9</a></li>
+			   <li class="page-item"><a class="page-link" href="#">10</a></li>
+			   <li class="page-item Next-page">
+				  <a class="page-link" href="#" aria-label="Next">
+					 <span aria-hidden="true">&raquo;</span>
+				  </a>
+			   </li>
+			   </ul>
+			</nav>
+		</div>
+	</section>
+	<!-- ? ==> -------  Start  Movies Slider VComming Up   -------- -->
+	<movies-slider>
+		<div class="container Movies_Slider Slider-2 my-4">
+			<h5>Coming Up :</h5>
+			<div class="Cards-Holder Coming_Up"></div>
+			<div class="buttons">
+				<span class="Left_btn"><</span>
+				<span class="Right_btn">></span>
+			</div>
+		</div>
+	</movies-slider>
+	<!-- ? <== -------  End  Movies Slider    -------- -->
+	
+	<section id="section_5" class="section_4 Arab-Content">
+		<h2 class="Section_title">Arab Content</h2>
+		<div id="Arab-Content" class="Cards_Holder d-flex f-wrap"></div>
+		<div class="Navigation-hlder">
+			<nav aria-label="Page navigation justify-content center">
+			   <ul class="pagination">
+			   <li class="page-item Previus-page">
+				  <a class="page-link" href="#" aria-label="Previous">
+					 <span aria-hidden="true">&laquo;</span>
+				  </a>
+			   </li>
+			   <li class="page-item Curent-page"><a class="page-link" href="#">1</a></li>
+			   <li class="page-item"><a class="page-link" href="#">2</a></li>
+			   <li class="page-item"><a class="page-link" href="#">3</a></li>
+			   <li class="page-item"><a class="page-link" href="#">4</a></li>
+			   <li class="page-item"><a class="page-link" href="#">5</a></li>
+			   <li class="page-item"><a class="page-link" href="#">6</a></li>
+			   <li class="page-item"><a class="page-link" href="#">7</a></li>
+			   <li class="page-item"><a class="page-link" href="#">8</a></li>
+			   <li class="page-item"><a class="page-link" href="#">9</a></li>
+			   <li class="page-item"><a class="page-link" href="#">10</a></li>
+			   <li class="page-item Next-page">
+				  <a class="page-link" href="#" aria-label="Next">
+					 <span aria-hidden="true">&raquo;</span>
+				  </a>
+			   </li>
+			   </ul>
+			</nav>
+		</div>
+	</section>
+	<section id="section_6" class="section_6 TvSeries-Airing-Today">
+		<h2 class="Section_title">Tv Series Airing Today</h2>
+		<div id="TvSeries-Airing-Today" class="Cards_Holder d-flex f-wrap"></div>
+		<div class="Navigation-hlder">
+			<nav aria-label="Page navigation justify-content center">
+			   <ul class="pagination">
+			   <li class="page-item Previus-page">
+				  <a class="page-link" href="#" aria-label="Previous">
+					 <span aria-hidden="true">&laquo;</span>
+				  </a>
+			   </li>
+			   <li class="page-item Curent-page"><a class="page-link" href="#">1</a></li>
+			   <li class="page-item"><a class="page-link" href="#">2</a></li>
+			   <li class="page-item"><a class="page-link" href="#">3</a></li>
+			   <li class="page-item"><a class="page-link" href="#">4</a></li>
+			   <li class="page-item"><a class="page-link" href="#">5</a></li>
+			   <li class="page-item"><a class="page-link" href="#">6</a></li>
+			   <li class="page-item"><a class="page-link" href="#">7</a></li>
+			   <li class="page-item"><a class="page-link" href="#">8</a></li>
+			   <li class="page-item"><a class="page-link" href="#">9</a></li>
+			   <li class="page-item"><a class="page-link" href="#">10</a></li>
+			   <li class="page-item Next-page">
+				  <a class="page-link" href="#" aria-label="Next">
+					 <span aria-hidden="true">&raquo;</span>
+				  </a>
+			   </li>
+			   </ul>
+			</nav>
+		</div>
+	</section>
+	<section id="section_7" class="section_7 TvSeries-On-Air">
+		<h2 class="Section_title">Tv Series on the Air</h2>
+		<div id="TvSeries-On-Air" class="Cards_Holder d-flex f-wrap"></div>
+		<div class="Navigation-hlder">
+			<nav aria-label="Page navigation justify-content center">
+			   <ul class="pagination">
+			   <li class="page-item Previus-page">
+				  <a class="page-link" href="#" aria-label="Previous">
+					 <span aria-hidden="true">&laquo;</span>
+				  </a>
+			   </li>
+			   <li class="page-item Curent-page"><a class="page-link" href="#">1</a></li>
+			   <li class="page-item"><a class="page-link" href="#">2</a></li>
+			   <li class="page-item"><a class="page-link" href="#">3</a></li>
+			   <li class="page-item"><a class="page-link" href="#">4</a></li>
+			   <li class="page-item"><a class="page-link" href="#">5</a></li>
+			   <li class="page-item"><a class="page-link" href="#">6</a></li>
+			   <li class="page-item"><a class="page-link" href="#">7</a></li>
+			   <li class="page-item"><a class="page-link" href="#">8</a></li>
+			   <li class="page-item"><a class="page-link" href="#">9</a></li>
+			   <li class="page-item"><a class="page-link" href="#">10</a></li>
+			   <li class="page-item Next-page">
+				  <a class="page-link" href="#" aria-label="Next">
+					 <span aria-hidden="true">&raquo;</span>
+				  </a>
+			   </li>
+			   </ul>
+			</nav>
+		</div>
+	</section>
+
+	<Scroll-btn>
+		<div class="ScrollTotop">
+			<span class="d-flex align-items-center justify-content-center"><</span>
+		</div>
+	</Scroll-btn>
+	<footer style="position: relative;">
+		<video src="../MoviesTrailers/Interstellar Tribute _ bg Video(1080P_HD).mp4" loop muted autoplay id="FooterCover"></video>
+		<!-- <img src="../MoviesImage/66479dc9848fdaba4717734ea243ece2.jpg" id="FooterCover"/> -->
+		<div class="countainer">
+			<div class="row" style="gap: 0;">
+				<div class="col-6 p-1"  id="FooterLogo-Webpage" style="height: 500px;max-width: 100%;">
+					<h1 class="Footer-Logo m-0">Movies_4U</h1>
+					<div class="tags d-flex text-align-center m-2">
+						<span class="tag">Action</span>
+						<span class="tag">Action</span>
+					</div>
+				</div>
+				<div class="col-6">
+					 <div class="FooterDataLinks" style="height: 500px;max-width: 100%;">
+						<ul>
+							<li>Help</li>
+							<li>Contact</li>
+							<li>Find</li>
+							<li>Sql</li>
+							<li>CopyRights</li>
+						</ul>
+						<ul>
+							<li>Help</li>
+							<li>Contact</li>
+							<li>Find</li>
+							<li>Sql</li>
+							<li>CopyRights</li>
+						</ul>
+						<ul>
+							<li>Help</li>
+							<li>Contact</li>
+							<li>Find</li>
+							<li>Sql</li>
+							<li>CopyRights</li>
+						</ul>
+					</div> 
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<script src="./js/index.js"></script>
+	<script src="./js/DOMConten.js"></script>
+	<script src="./js/Api.js"></script>
+	<script src="./js/Vue.js"></script>
+	<script src="./js/bootstrap.js"></script>
+
+</body>
+</html>

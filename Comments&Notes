@@ -1,0 +1,210 @@
+
+// ! ------------------ Tmdb Links -------------------
+
+
+// simillar : let options = {method: 'GET', headers: {accept: 'application/json'}};
+// fetch('https://api.themoviedb.org/3/tv/series_id/similar?language=en-US&page=1', options)
+//   .then(response => response.json())
+//   .then(response => console.log(response))
+//   .catch(err => console.error(err));
+
+// TV SEASONS images  : let options = {method: 'GET', headers: {accept: 'application/json'}};
+
+// fetch('https://api.themoviedb.org/3/tv/series_id/season/season_number/images', options)
+//   .then(response => response.json())
+//   .then(response => console.log(response))
+//   .catch(err => console.error(err));
+
+// Tv SEARIES VIDEOS : let options = {method: 'GET', headers: {accept: 'application/json'}};
+
+// fetch('https://api.themoviedb.org/3/tv/series_id/season/season_number/videos?language=en-US', options)
+//   .then(response => response.json())
+//   .then(response => console.log(response))
+//   .catch(err => console.error(err));
+
+// TV EPISODES IMAGES :let options = {method: 'GET', headers: {accept: 'application/json'}};
+
+// fetch('https://api.themoviedb.org/3/tv/series_id/season/season_number/episode/episode_number/images', options)
+// .then(response => response.json())
+// .then(response => console.log(response))
+// .catch(err => console.error(err));
+
+// TV EPISODES VISDEOS : let options = {method: 'GET', headers: {accept: 'application/json'}};
+
+// fetch('https://api.themoviedb.org/3/tv/series_id/season/season_number/episode/episode_number/videos?language=en-US', options)
+//   .then(response => response.json())
+//   .then(response => console.log(response))
+//   .catch(err => console.error(err));
+
+
+// TV EPISODES GROUP DETAILS :let options = {method: 'GET', headers: {accept: 'application/json'}};
+
+// fetch('https://api.themoviedb.org/3/tv/episode_group/tv_episode_group_id', options)
+//   .then(response => response.json())
+//   .then(response => console.log(response))
+//   .catch(err => console.error(err));
+
+// TV SERIES POPULAR : let options = {method: 'GET', headers: {accept: 'application/json'}};
+
+// fetch('https://api.themoviedb.org/3/tv/popular?language=en-US&page=1', options)
+//   .then(response => response.json())
+//   .then(response => console.log(response))
+//   .catch(err => console.error(err));
+
+// TV SERIES ON THE AIR : let options = {method: 'GET', headers: {accept: 'application/json'}};
+
+// fetch('https://api.themoviedb.org/3/tv/on_the_air?language=en-US&page=1', options)
+//   .then(response => response.json())
+//   .then(response => console.log(response))
+//   .catch(err => console.error(err));
+
+// TV SERIES AIRING TODAY : let options = {method: 'GET', headers: {accept: 'application/json'}};
+
+// fetch('https://api.themoviedb.org/3/tv/airing_today?language=en-US&page=1', options)
+//   .then(response => response.json())
+//   .then(response => console.log(response))
+//   .catch(err => console.error(err));
+
+// TRENDING POEPLE : let options = {method: 'GET', headers: {accept: 'application/json'}};
+
+// fetch('https://api.themoviedb.org/3/trending/person/day?language=en-US', options)
+//   .then(response => response.json())
+//   .then(response => console.log(response))
+//   .catch(err => console.error(err));
+
+// TRENDING ALL : let options = {method: 'GET', headers: {accept: 'application/json'}};
+
+// fetch('https://api.themoviedb.org/3/trending/all/day?language=en-US', options)
+//   .then(response => response.json())
+//   .then(response => console.log(response))
+//   .catch(err => console.error(err));
+
+// SEARCH COMPANY : let options = {method: 'GET', headers: {accept: 'application/json'}};
+
+// fetch('https://api.themoviedb.org/3/search/company?page=1', options)
+//   .then(response => response.json())
+//   .then(response => console.log(response))
+//   .catch(err => console.error(err));
+
+// SEARCH MOVIES  let options = {method: 'GET', headers: {accept: 'application/json'}};
+
+// fetch('https://api.themoviedb.org/3/search/movie?include_adult=false&language=en-US&page=1', options)
+//   .then(response => response.json())
+//   .then(response => console.log(response))
+//   .catch(err => console.error(err));
+
+// SEARCH TV :let options = {method: 'GET', headers: {accept: 'application/json'}};
+
+// fetch('https://api.themoviedb.org/3/search/tv?include_adult=false&language=en-US&page=1', options)
+//   .then(response => response.json())
+//   .then(response => console.log(response))
+//   .catch(err => console.error(err));
+
+// SEARCH PERSON: let options = {method: 'GET', headers: {accept: 'application/json'}};
+
+// fetch('https://api.themoviedb.org/3/search/person?include_adult=false&language=en-US&page=1', options)
+//   .then(response => response.json())
+//   .then(response => console.log(response))
+//   .catch(err => console.error(err));
+
+// LATEST : let options = {method: 'GET', headers: {accept: 'application/json'}};
+
+// fetch('https://api.themoviedb.org/3/person/latest', options)
+//   .then(response => response.json())
+//   .then(response => console.log(response))
+//   .catch(err => console.error(err));
+
+// NETWROKS IMAGES  : let options = {method: 'GET', headers: {accept: 'application/json'}};
+
+// fetch('https://api.themoviedb.org/3/network/network_id/images', options)
+//   .then(response => response.json())
+//   .then(response => console.log(response))
+//   .catch(err => console.error(err));
+
+// ===> ALTERNATIVE NAME :https://api.themoviedb.org/3/network/{network_id}/alternative_names
+// ===> ALTERNATIVE DETAILS: https://api.themoviedb.org/3/network/{network_id}
+
+// MOVIES TRASLATIONS : let options = {method: 'GET', headers: {accept: 'application/json'}};
+
+// fetch('https://api.themoviedb.org/3/movie/movie_id/translations', options)
+//   .then(response => response.json())
+//   .then(response => console.log(response))
+//   .catch(err => console.error(err));
+
+// ====> SIMILAR : https://api.themoviedb.org/3/movie/{movie_id}/similar
+// ====> LATEST : https://api.themoviedb.org/3/movie/latest
+
+
+// MOVIES LIST UPCOMING : https://api.themoviedb.org/3/movie/upcoming
+// let options = {method: 'GET', headers: {accept: 'application/json'}};
+// fetch('https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1', options)
+//   .then(response => response.json())
+//   .then(response => console.log(response))
+//   .catch(err => console.error(err));
+
+// MOVIES LIST GENRE :let options = {method: 'GET', headers: {accept: 'application/json'}};
+
+// fetch('https://api.themoviedb.org/3/genre/movie/list?language=en', options)
+//   .then(response => response.json())
+//   .then(response => console.log(response))
+//   .catch(err => console.error(err));
+
+// MOVIES LIST TV GENRE :let options = {method: 'GET', headers: {accept: 'application/json'}};
+
+// fetch('https://api.themoviedb.org/3/genre/tv/list?language=en', options)
+//   .then(response => response.json())
+//   .then(response => console.log(response))
+//   .catch(err => console.error(err));
+
+// ACOUNT FAVORITE TV : let options = {method: 'GET', headers: {accept: 'application/json'}};
+
+// fetch('https://api.themoviedb.org/3/account/null/favorite/tv?language=en-US&page=1&sort_by=created_at.asc', options)
+//   .then(response => response.json())
+//   .then(response => console.log(response))
+//   .catch(err => console.error(err));
+
+// ACOUNT WATCH LIST MOVIES : let options = {method: 'GET', headers: {accept: 'application/json'}};
+
+// fetch('https://api.themoviedb.org/3/account/null/watchlist/movies?language=en-US&page=1&sort_by=created_at.asc', options)
+//   .then(response => response.json())
+//   .then(response => console.log(response))
+//   .catch(err => console.error(err));
+// ------------------ Tmdb Links -------------------
+
+
+// ? this section Only for The Tv Show and Series :
+// <!-- -------------- Episodes Holder Start -------------- -->
+// <section id="SectionEpisodes_Holder">
+// 	<div class="SeriesSelecter container d-flex align-center justify-content-around py-3">
+// 		<select class="py-2 px-5 name="Season" id="Season_Selecter" style="border-radius: 17px; background: orangered;box-shadow: inset .2rem .3em 20px var(--text-color--);font-weight: bolder;">
+// 			<option value="">Season 1</option>
+// 			<option value="">Season 2</option>
+// 			<option value="">Season 3</option>
+// 			<option value="">Season 4</option>
+// 			<option value="">Season 5</option>
+// 		</select>
+// 		<select class="py-2 px-5" name="Episode" id="Episde_Selecter" style="border-radius: 17px; background: orangered;box-shadow: inset .2rem .3em 20px var(--text-color--);font-weight: bolder;">
+// 			<option value="">Episode 1</option>
+// 			<option value="">Episode 2</option>
+// 			<option value="">Episode 3</option>
+// 			<option value="">Episode 4</option>
+// 			<option value="">Episode 5</option>
+// 		</select>
+// 	</div>
+// 	<div class="Series_Holder"  style="max-height: 100vh;margin-bottom: 3rem;overflow-x: hidden;overflow-y: scroll;box-shadow: inset 2px .1rem 20px #2222;">
+// 		<div class="container-fluid d-flex flex-wrap py-3">
+// 			<div class="EpisodeCard">
+// 				<img src="../MoviesImage/antlers.jpeg" alt="" class="SerieCover">
+// 				<div class="EpisodeRates">
+// 					<span id="Ep_Num">1</span>
+// 					<span id="Ep_rate">6.3</span>
+// 				</div>
+// 				<div class="buttom-btns">
+// 					<span><i class="fab fa-download"></i></span>
+// 					<span><i class="fab fa-Eye"></i></span>
+// 				</div>
+// 			</div>
+// 		</div>
+// 	</div>
+// </section>
+// <!-- -------------- Episodes Holder End -------------- -->

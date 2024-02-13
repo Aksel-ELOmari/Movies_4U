@@ -1,0 +1,1657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	<link rel="stylesheet" href="./css/bootstrap.css">
+	<link rel="stylesheet" href="./css/index.css">
+	<title>Movies_4U Home Page</title>
+</head>
+<style>
+	:root{
+	--Favourite-Color-- : orangered;
+	--text-color-- : #000;
+	--background-color-- : #fff;
+	--Blur-color--:#fff;
+}
+.Dark_Mood
+{
+	--Favourite-Color-- : orangered;
+	--text-color-- :#fff;
+	--background-color-- :  #000;
+	--Blur-color--:#000;
+}
+*{margin: 0;padding: 0;}
+
+body{
+	background-color: var(--background-color--);
+	min-height: 100vh;
+	min-height: 100svh;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+body::-webkit-scrollbar,.AboutMovie::-webkit-scrollbar
+{
+	width: 6px;
+	border-radius: 30px;
+	background: var(--background-color--);
+	/* background: #ffff; */
+}
+body::-webkit-scrollbar-thumb,.AboutMovie::-webkit-scrollbar-thumb
+{
+	width: 6px;
+	border-radius: 20px;
+	background:var(--Favourite-Color--);
+}
+header{
+	position: relative;
+	min-height:100vh;
+	width: 100%;
+	margin-bottom: .8rem;
+}
+header::before
+{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right,var(--Blur-color--) 15%,transparent);
+  z-index: -1;
+}
+header video,#background_Cover{
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	z-index: -2;
+}
+
+header .container .row div
+{
+	z-index: 3;
+	color: var(--text-color--);
+}
+header nav ul
+{
+	background: transparent;
+	color: #fff;
+	align-items: center ;
+}
+header nav .nav-link,header nav .nav-item{
+	z-index: 10;
+	color: var(--text-color--);
+}
+.nav-Regestration-btn
+{
+	box-shadow: .1rem .3rem 20px -.5rem var(--text-color--);
+	font-weight: 500;
+	cursor: pointer;
+	background: orange;
+}
+.nav-Regestration-btn:hover{background: var(--Favourite-Color--);}
+header nav .logo
+{
+   color: var(--text-color--);
+   margin: 0px 20px 0 30px;
+   z-index: 12;
+   user-select: none;
+} 
+.nav-link,.navbar-brand
+{
+	color:var(--text-color--);
+
+}
+.nav-link{
+	text-decoration: none;
+	border-radius: 20px;
+    color: var(--text-color--);
+	margin: 0 .6rem;
+	padding: 8px 14px;
+}
+.nav-link:hover{
+	background-color: orange;
+    color: var(--text-color--);
+}
+/* --------------- Search Field Start--------------- */
+
+.SearchBar
+{
+	position: relative;
+	height: fit-content;
+}
+/* @media screen and (width >= 991px) */
+@media screen and (width >= 1230px){
+	.SearchBar-Largesize
+	{
+		display: none!important;
+	}
+	.SearchBar-Smallsize
+	{
+		display: block !important;
+	}
+}
+@media screen and (width <= 1230px) {
+	.SearchBar-Smallsize
+	{
+		display: block!important;
+	}
+	.SearchBar-Largesize
+	{
+		display: none!important;
+	}
+}
+.SearchResults::-webkit-scrollbar{width: 0;}
+.SearchResults
+{
+	position: absolute;
+	left: 0;
+	top: 45px;
+	height: 300px;
+	width:88%;
+	border-radius: 12px;
+	display:flex;
+	align-items: center;
+	flex-direction: column;
+	z-index:10;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+	/* display: none; */
+}
+.SearchResults a
+{
+	text-decoration: none;
+	cursor: pointer;
+	min-height:36px;
+	width: 100%;
+	margin-bottom: 6px;
+	display:flex;
+	align-items: center;
+	padding: 1rem .2rem;
+	backdrop-filter: blur(20px);
+	background: #b08010cb;
+	border-radius: 9px;
+}
+.SearchResults a img
+ {
+	margin-right: 4px;
+	height:30px;
+	width: 26px;
+ }
+ .SearchResults a .ResultCardData
+ {
+	translate: -40px 0;
+ }
+ .SearchResults a h6
+ {
+	margin: 0;
+
+ }
+ .SearchResults a #ResultCardDetails
+ {
+	font-size: 14px;
+	display: flex;
+	align-items: center;
+	gap: .1rem;
+ }
+ .SearchResults a #ResultCardDetails span
+ {
+	font-size: 14px;
+	display: flex;
+	align-items: center;
+	gap: .1rem;
+	flex-wrap: nowrap;
+	white-space: nowrap;
+ }
+.SearchResults a #ResultCardDetails span li
+{
+	display: inline-block;
+}
+.SearchField
+{
+  position: relative;
+  height: 38px;
+  width: 100%;
+  border-radius: 30px;
+  border: solid 2px red;
+  background: #222222e0;
+}
+.SearchField #SearchInput
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: transparent;
+	padding: 0 20px;
+	font-weight: 600;
+	color: var(--Favourite-Color--);
+	border: 0;
+	outline: 0;
+	color: #fff;
+	font-weight: 400;
+
+}
+/* ------- Showing the SearchResultBar whene ever we focus on the input search-------- */
+.SearchField #SearchInput:focus+.SearchResults
+{
+	display: block;
+}
+/* ------- Showing the SearchResultBar whene ever we focus on the input search-------- */
+.SearchField  label
+{
+	position: absolute;
+	top: 0;
+	right: 10px;
+	display: flex;
+	align-items: center;
+	justify-content:center;
+	z-index: 1;
+}
+
+.navbar-toggler
+{
+    background-color: var(--text-color--)!important;
+    color: var(--background-color--),#fff!important;
+}
+/* ----------- Start User Profile ------------ */
+.User_Profile
+{
+   position:relative;
+   height: 38px;
+   min-width: 38px;
+   margin: 10px;
+   border: solid 2px red;
+   border-radius: 50%;
+   z-index: 20;
+}
+/* .User_Profile:hover > ul {display: block;} */
+.User_Profile img 
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	border-radius: 50%;
+}
+/* .User_Profile ul:hover{display: block;} */
+.User_Profile ul 
+{
+	height: 200px;
+	width: 200px;
+	padding: 1rem ;
+	background: #1212;
+	position: absolute;
+	top: 36px;
+	left: 50%;
+	translate: -50% 0;
+	border-radius: 12px;
+	display: none;
+	cursor: pointer;
+	box-shadow: 0 0 20px -5px var(--text-color--);
+    z-index: 9;
+}
+.User_Profile ul li{white-space: nowrap;list-style: none;}
+.User_Profile ul li:hover{color: blue;} 
+/* ----------- End User Profile ------------ */
+
+header .container .row
+{
+	translate: 0 70px;
+}
+header #Movies_Title{
+	margin-bottom: 20px;
+	color: var(--Favourite-Color--);
+	font-weight: bolder;
+	font-family: 'Lucida Sans Unicode', 'Lucida Grande';
+}
+header .AboutMovie{
+	margin: .4rem 0;
+	line-height: 25px;
+	color: var(--text-color--);
+	max-height: 240px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+.buttons{
+	margin: 1rem 0;
+	display: flex;
+	gap: 1rem;
+}
+header .container .row div:nth-child(1){
+	margin: 20px 10px;
+}
+.img-holder{
+	width: 100%;
+	height: 300px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.img-holder img
+{
+	position:relative;
+	height: 400px;
+	width: 220px;
+	max-height: 100%;
+	max-width: 100%;
+	border-radius: 8px;
+	transition: .4s;
+	scale: 1.2;
+}
+
+.img-holder img:hover
+{
+	filter: drop-shadow(.1rem -1rem 16px   var(--text-color--));
+	
+}
+/* -------------  Start Scrol Bar style    ---------------- */
+.Movies_Slider
+{
+	position: relative;
+}
+.Movies_Slider h5
+{
+	color: var(--text-color--);
+	width: fit-content;
+	position: relative;
+	text-transform: capitalize;
+}
+.Movies_Slider .Cards-Holder
+{
+	height: 300px;
+	min-width: 100%;
+	overflow-x: hidden;
+	display: flex;
+	align-items: center;
+	gap: .6rem;
+	box-shadow: 0 2px 12px -3px var(--text-color--);
+	padding: 1rem ;
+	padding-bottom:0 ;
+	border-radius: 12px;
+}
+.Movies_Slider .Cards-Holder::-webkit-scrollbar{background: transparent;}
+.Cards-Holder:hover + .buttons span{opacity: 1;}
+.Cards-Holder::-webkit-scrollbar{width: 0;}
+.Cards-Holder #Related_Card
+{
+	position: relative;
+	height: 100%;
+	width: 170px;
+	min-width: 170px;
+	border: solid 1px #000;
+	border-radius: 12px;
+	transition:min-width ease-in-out .5s;
+	overflow: hidden;
+	cursor: pointer;
+}
+.Cards-Holder #Related_Card:hover
+{
+	min-width: 40%;
+}
+.Cards-Holder #Related_Card:hover > .Data {visibility: visible;}
+.Cards-Holder #Related_Card #RelatedPoster {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	transition: opacity 0.3s ease; /* Added transition property for a smooth effect */
+  }
+  
+  .Cards-Holder #Related_Card:hover #RelatedPoster {
+	opacity: 0; /* Hide RelatedPoster on hover */
+  }
+  
+  .Cards-Holder #Related_Card #RelatedCover {
+	opacity: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	min-width: 300px;
+  }
+  
+  .Cards-Holder #Related_Card:hover #RelatedCover {
+	opacity: 1;
+  }
+  
+
+.Cards-Holder #Related_Card .Data 
+{
+	position: relative;
+	top: 80%;
+	margin: .3rem;
+	width: 100%;
+	text-wrap: nowrap;
+	word-break: break-all;
+	display: flex;
+	align-items: center;
+	gap: .3rem;
+	visibility: hidden;
+	white-space: nowrap;
+	text-wrap: nowrap;
+}
+.Cards-Holder #Related_Card .Data .Details span
+{
+	color: #fff;
+	margin: 0 .2rem;
+	font-weight: 600;
+}
+
+.Movies_Slider .buttons{
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	height: fit-content;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	
+}
+.Movies_Slider .buttons span
+{
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	background: rgba(99, 96, 96, 0.561);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 900;
+	color: #ffff;
+	opacity: 0;
+}
+.Movies_Slider .buttons span:hover
+{
+	background: rgba(78, 75, 75, 0.879);
+	cursor: pointer;
+	opacity: 1;
+}
+/* -------------  End Scrol Bar style    ---------------- */
+/* ----------------------   Styling the Cards Start     ------------------------- */
+section
+{
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	padding: 1rem 0;
+	inset: 0;
+	/* border: 1px solid red; */
+	display: block;
+}
+section .Section_title
+{
+	position: relative;
+	margin-left:4rem;
+	width: fit-content;
+	padding: .4rem 30px;
+	border-radius: 0 50% 0 50%;
+	background: var(--Favourite-Color--);
+	font-size: 1.2rem;
+	box-shadow: .1rem .3rem 20px -.5rem var(--text-color--);
+}
+.Cards_Holder
+{
+	display: flex;
+	min-height: 90%;
+	/* border: solid 2px yellow; */
+	flex-wrap: wrap;
+	gap: 1rem ;
+	padding:.5rem;
+	padding-right:0;
+}
+.Navigation-hlder
+{
+   position: relative;
+   bottom: 0;
+   left: 35%;
+   height: 10%;
+}
+.Cards_Holder .Card
+{
+	position: relative;
+	max-height: 340px;
+	width: 160px;
+	border: solid 2px #000;
+	border-radius: 12px;
+	overflow: hidden;
+	padding-bottom: .3rem;
+	cursor: pointer;
+	display: inline;
+}
+.Cards_Holder .Card img
+{
+	position: relative;
+	top: 0;
+	left: 0;
+	max-height: 90%;
+	max-width: 100%;
+}
+.Cards_Holder .Card .Details
+{
+	font-size: 14px;
+}
+
+.Cards_Holder .Card .Details #Rate
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: .3rem;
+	height: 40px;
+	width: 40px;
+	background:#000;
+	color: yellow;
+	display: flex;
+	align-items: center;
+	border-radius: 50%;
+	border: solid 2px orange;
+}
+.Cards_Holder .Card .Details #Dur
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 40px;
+	width: 40px;
+	padding: .3rem;
+	background:#000;
+	color: green;
+	display: flex;
+	align-items: center;
+	border-radius: 50%;
+	border: solid 2px orange;
+}
+.Cards_Holder .Card .Details #Genre,#Type,#Comp,#Date
+{
+	color: var(--text-color--);
+	font-weight: 300;
+	margin-left: .4rem;
+
+}
+
+.Cards_Holder .Card .Data h4
+{
+	text-align: center;
+	text-transform: capitalize;
+	margin: 10px auto 7px auto;
+	text-overflow: ellipsis;
+	text-wrap: nowrap;
+	overflow: hidden;
+	font-size: 17px;
+}
+/* ----------------------   Styling the Cards End     ------------------------- */
+/* ----------------- Start  Styling the Watch Container  --------------------- */
+
+#Downlad-WatchBar
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	min-height: 100vh;
+	min-height: 100svh;
+	width: 100vw;
+	backdrop-filter: blur(200px);
+	z-index: 10000;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+#Downlad-WatchBar .container
+{
+	/* background: #531805; */
+	background: #121212;
+	padding: .5rem;
+}
+#Downlad-WatchBar .container .ExitBtn
+{
+	margin: 10px 0;
+}
+#Downlad-WatchBar .container .ExitBtn span
+{
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+	background: #000;
+	color: #fff;
+	font-weight: lighter;
+	font-size: 25px;
+	padding: .3rem .5rem;
+	cursor: pointer;
+}
+#Downlad-WatchBar .container .ExitBtn span:hover{background: #eeee;}
+#Downlad-WatchBar .container .IframContent_Title 
+{
+	font-size: 30px;
+	color:#fff;
+	margin: 20px 30px;
+}
+#Downlad-WatchBar .container .VideoShower
+{
+	height: 500px;
+	width: 100%;
+	border: solid 2px #000;
+	border-radius: 12px;
+}
+/* ----------------- End Styling the Watch Container  --------------------- */
+
+/* => ------------------------ Start Styling the Regestration Section -------------------- */
+#Skip_Reg
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: var(--Favourite-Color--);
+	height: 36px;
+	width: 36px;
+	border-radius: 0 40% 0 45%;
+	cursor: pointer;
+}
+#Skip_Reg:hover{background: red;}
+.UserRegestartionSite
+{
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: #0f1631;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+	z-index: 100;
+}
+.Regestration-Body
+{
+	min-height: 80svh;
+	min-height: 80vh;
+	width: 60%;
+	border: solid 2px #fff;
+	border-radius: 12px;
+	padding:0 1rem ;
+	overflow: hidden;
+	backdrop-filter: blur(30px);
+	background-image: linear-gradient(45deg,rgb(69, 13, 108),rgb(80, 9, 9));
+	background-position: center;
+	background-size:cover;
+}
+.image-side
+{
+	position: relative;
+	top: 0;
+	left: 0;
+	min-height: 80vh;
+	min-height: 80svh;
+}
+.image-side img
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	object-position: center;
+	object-fit: cover;
+	transition: .7s .4s linear;
+}
+.image-side img:hover{scale: 1.1;}
+.form-side
+{
+	padding: .2rem .3rem;
+	text-align: center;
+}
+form input
+{
+	width: 80%;
+	padding: 10px;
+	border-radius: 20px;
+	margin: 10px 0;
+	border: 0;
+	outline: 0;
+}
+#SingUp-Task form input
+{
+	width: 100%;
+}
+#SingUp-Task form #Regestration-Submitbtn
+{
+	width: 80%;
+}
+.RememberUser
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.RememberUser #check-RemeberUser
+{
+	width: fit-content;
+	margin: 0;
+	display: inline-block;
+	margin-right: .3rem;
+}
+.RememberUser #check-RemeberUser:checked{
+	color: orange;
+	background: red;
+}
+form input:focus{border: 2px solid var(--Favourite-Color--);}
+form #Regestration-Submitbtn
+{
+	color: var(--text-color--),#000;
+	font-weight: bold;
+	background: orange;
+	box-shadow: inset 0 0 10px .2rem black;
+	border: 0;
+	outline: 0;
+}form #Regestration-Submitbtn:hover,.Other-Device:hover{background: var(--Favourite-Color--);}
+.form-side p 
+{
+
+	color: #fff;
+}
+.Other-Device 
+{
+	padding: 10px 0;
+	border-radius: 20px;
+	background: var(--text-color--),ffff;
+	border: 0;
+	width: 70%;
+	margin: .2rem auto;
+	background: orange;
+	box-shadow: inset .3rem .2rem 10px 0rem #000;
+}
+.Other-Device a
+{
+	text-decoration: none;
+	color: #000;
+	font-weight: bolder;
+	cursor: pointer;
+}
+/* <= ------------------------ Start Styling the Regestration Section -------------------- */
+
+/* ---------------------- Styling the Offcanvas S4ection Bar Start ------------------ */
+.offcanvas-body
+{
+	min-height: 80vh;
+	background: green;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	background: var(--background-color--);
+	color: var(--text-color--);
+}
+.offcanvas-tags
+{
+	height: 340px;
+	overflow-x: hide;
+	overflow-y: scroll;
+
+}
+.offcanvas-tag
+{
+    font-weight: 600;
+	color: var(--text-color--);
+	cursor: pointer;
+}
+/* ---------------------- Styling the Offcanvas S4ection Bar End ------------------ */
+
+
+
+/* ----------------- Styling Webpage Footer ---------------------- */
+footer{margin-top: 30px;}
+@media screen and (width < 600px) {
+	#FooterLogo-Webpage,.FooterDataLinks{
+		height: 300px;
+		max-width: 100%;
+		padding: 0;
+	}
+	.img-holder img
+	{
+		scale: 1;
+		translate: 0 -10%;
+	}
+}
+footer > #FooterCover
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	z-index:-2323;
+	/* opacity: .2; */
+}
+#FooterLogo-Webpage
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 2rem;
+	backdrop-filter: blur(12px);
+}
+#FooterLogo-Webpage h1
+{
+	font-size: 70px;
+	scale: 1rem;
+	font-weight: 900;
+	margin-bottom:20%;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	animation:AnimateLogo_Bottom ease-in-out 30s infinite both;
+
+}
+
+
+/* -------------- this section styling is for tvseries website Start ------------- */
+
+/* -------- Episodes Holder -------- */
+.EpisodeCard
+{
+  display: inline-block;
+  position: relative;
+  height:200px;
+  width: 120px;
+  border: solid 2px #000;
+  border-radius: 5px;
+  margin: 10px;
+}
+.EpisodeCard img
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+}
+.EpisodeCard .EpisodeRates
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: fit-content;
+	width: 100%;
+	display:flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: .3rem;
+}
+.EpisodeCard .EpisodeRates #Ep_Num,.EpisodeCard .EpisodeRates #Ep_rate
+{
+	height: 35px;
+	width: 35px;
+	border-radius: 50%;
+	border: solid 1.4px var(--Favourite-Color--);
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 400;
+	color: #fff;
+}
+
+.EpisodeCard .buttom-btns
+{
+	position: absolute;
+	bottom: 0px;
+	left: 0;
+	/* height: fit-content; */
+	height: 40px;
+	z-index: 12;
+	width: 100%;
+	display:flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: .3rem;
+	transition: .3s;
+}
+.EpisodeCard .buttom-btns span
+{
+	height: 35px;
+	width: 35px;
+	border-radius: 50%;
+	border: solid 1.4px yellow;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 400;
+	color: #fff;
+	font-size: 17px;
+	cursor: pointer;
+}
+.disabled{
+	cursor: not-allowed;
+	opacity: .2;
+ }
+/* -------- Episodes Holder -------- */
+/* -------------- this section styling is for tvseries website End------------- */
+#FooterLogo-Webpage h1
+{
+	translate: 0 -50%;
+}
+#FooterLogo-Webpage
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.tags
+{
+	height: fit-content;
+	max-width: 50vw;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 1rem;
+}
+.tag{
+	color: var(--text-color--);
+	font-weight: 500;
+	font-size: 17px;
+	padding: 10px 20px;
+	border-radius: 20px;
+	margin: 4px;
+	display: inline-block;
+	background-color: orange;
+	cursor: pointer;
+	box-shadow: .1rem .3rem 20px -.5rem var(--text-color--);
+	transition: .3s;
+}
+.tag:hover{background-color: var(--Favourite-Color--);color: var(--background-color--);}
+
+/* ? Stylig the scrollTotop Btn */
+.ScrollTotop
+{
+	rotate: 90deg;
+	font-weight: bold;
+	color: var(--Favourite-Color--);
+	cursor: pointer;
+	position: fixed;
+	bottom: 2rem;
+	right: .4rem;
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	background: #121212;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1;
+    /* display: none; */
+}
+
+@keyframes  AnimateLogo_Bottom{
+	10%{
+		text-shadow: 3px 2px 6px #ff4500;
+		color: #6edff6;
+	}
+	20%{
+		text-shadow: 3px 2px 10px #ff4500;
+		color: #ea868f;
+	}
+	30%{
+		text-shadow: 3px 2px 14px #ff4500;
+		color: #842029;
+	}
+	40%{
+		text-shadow: 3px 2px 18px #ff4500;
+		color: #ffe484;
+	}
+	50%{
+		text-shadow: 3px 2px 22px #ff4500;
+		color: #00ffff;
+	}
+	60%{
+		text-shadow: 3px 2px 26px #ff4500;
+		color: #adff2f;
+	}
+	70%{
+		text-shadow: 3px 2px 30px #ff4500;
+		color: yellow;
+	}
+	80%{
+		text-shadow: 3px 2px 34px #ff4500;
+		color: rgb(0, 174, 255);
+	}
+
+	90%{
+		text-shadow: 3px 2px 38px #ff4500;
+		color: rgb(212, 0, 255);
+	}
+	100%{
+		text-shadow: 3px 2px 42px #ff4500;
+		color: rgb(255, 0, 179);
+	}
+}
+
+.FooterDataLinks
+{
+	display: flex;
+	align-items:center;
+	justify-content: space-evenly;
+	padding: 2rem .4rem;
+	backdrop-filter: blur(12px);
+}
+.FooterDataLinks ul li 
+{
+	color: #ffff;
+	font-weight: 400;
+	cursor: pointer;
+}
+.FooterDataLinks ul li:hover
+{
+	color: blue;
+}
+/* ----------------- Styling Webpage Footer ---------------------- */
+
+</style>
+<body class="Dark_Mood">
+<!-- <body> -->
+	 <header>
+		<!-- ------------- bootstrap nav bar Start---------------- -->
+	    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="overflow: visible;">
+			<div class="container-fluid nav-Barholder">
+				<a class="navbar-brand me-lg-5 ms-xl-5" href="#home" style="z-index: 7;">Movies<b style="color: orangered;">_4U</b></a>
+				<button class="navbar-toggler m-0 p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link " aria-current="page" href="#">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#section_1">New</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#section_2">Popular</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" target="_blank" href="./Series.html">TvShows</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" target="_blank" href="./Anime.html">Anime/Animation</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" target="_blank" href="./Arab.html">Arabic</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" target="_blank" href="about.html">About Us</a>
+						</li>
+					</ul>
+				</div>
+				<div class="nav-bar-icons d-flex align-center justify-content-center">
+					<div  class="nav-Regestration-btn nav-link me-1 px-4">
+						Login
+					</div>
+					<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+						<i class="fa-solid fa-ellipsis-vertical"></i>
+					</button>
+				</div>
+			</div>
+		</nav>
+		<img src="" alt="" id="background_Cover">
+		<div class="container py-3">
+			<div class="SearchBar col-12 SearchBar-Smallsize" style="border-radius: 20px;margin-bottom: 20px;">
+				<label class="d-flex align-items-center " role="search" style="height: 40px;z-index: 5;">
+					<input class="form-control me-2" id="searchInput" type="search" placeholder="Enter A Movie Name...md"
+					aria-label="Search" style="border-radius: 20px;min-width:350px;">
+					<button class="btn btn-outline-success searchBtn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+					<div class="User_Profile me-md-5">
+						<img src="../MoviesImage/A wounded fawn.jpeg" alt="" id="userCover">
+					</div>
+				</label>
+				<div class="SearchResults ps-2 d-none" name="SearchResults"></div>
+			</div>
+            <div class="row d-flex align-items-center justify-content-around">
+				<div class="col-lg-6">
+					<h2 id="Movies_Title" name="Movies_Title">INTERSTELLER</h2>
+					<div class="Caracters my-3 d-flex align-items-center gap-3"  style="color: var(--text-color--);">
+						<span id="Type">Movie</span>
+						<span id="Genre">Action</span>
+						<span  id="Released_date" id="Date">2023</span>
+						<span id="Rate" style="color: yellow;">9.5<i class="fa-solid fa-star"></i></span>
+						<span id="Dur" style="color: green;">189<i class="fab fa-time"></i></span>
+						<span id="Comp">Netfilex</span>
+					</div>
+					<div class="Description mb-2 w-100">
+						<p class="my-1 AboutMovie" id="TopOveriew" style="color: var(--text-color--);">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nisi itaque maxime quasi rerum porro ullam esse fugiat, cupiditate animi!
+						</p>
+					</div>
+					<div class="buttons">
+						<button class="btn btn-outline-danger" onclick="WatchTime(Movie_Video,Movies_Title,Released_date)">Watch <i class="fa-solid fa-film"></i></button>
+						<button class="btn btn-outline-danger" onclick="Trailer(background_Video,Movies_Title)">Trailer <i class="fa-regular fa-circle-play"></i></button>
+						<button class="btn btn-outline-danger" onclick="Download_Movies(Movie_Video)"><a id="download-btn">Download <i class="fa-regular fa-circle-down"></i></a></button>
+					</div>
+				</div>
+				<div class="col-lg-4 py-4" >
+					<div class="img-holder">
+						<img src="../MoviesImage/infiesto -1.jpeg" alt="" id="Movie-Topimg">
+						<!-- <img src="" alt="" id="Movie-Topimg">-->
+						<video src="../MoviesTrailers/Better Call Saul Season 4 Comic-Con Trailer _ Rotten Tomatoes TV(1080P_HD).mp4" id="background_Video" class="d-none" name="background_Video"></video>
+						<video src="../MovisVideosEdites/This trailer is amazing --__•__•__c _ awaykenn (tt)___kungfupanda4 _kungfupanda _po _tailung _mastershifu _dreamworks _cartoon _edit _fyp _fypシ _viral _parati(MP4).mp4" id="Movie_Video" class="d-none" name="Movie_Video"></video>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+   <!-- ------------------ 	Offcanvas side Bar Start  ----------------- -->
+	<div class="offcanvas offcanvas-start" id="demo">
+		<div class="offcanvas-header" style="border-bottom: solid 1px #333;">
+		  <h1 class="offcanvas-title"  href="#home">Movies<b style="color: orangered;">_4U</b></h1>
+		  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+		</div>
+		<div class="offcanvas-body">
+		    <div class="UserSection">
+				<div class="offcanvas-tag">
+					<i class="fa-regular fa-user"></i>
+					My Acount
+				</div>
+				<div class="offcanvas-tag">
+					<i class="fa-regular fa-heart"></i>
+					Favourites
+				</div>
+				<div class="offcanvas-tag">
+					<i class="fa-solid fa-chart-line"></i>
+					Time Line
+				</div>
+				<div class="offcanvas-tag">
+					<i class="fa-solid fa-clock-rotate-left"></i>
+					Watch Later
+				</div>
+				<div class="offcanvas-tag">
+					<i class="fa-solid fa-hourglass-half"></i>
+					Didn't finish yet
+				</div>
+			
+				<i class="fa-solid fa-download"></i>
+				<i class="fa-regular fa-thumbs-up"></i>
+				<i class="fa-solid fa-people-group"></i>
+				<i class="fa-solid fa-exclamation"></i>
+			</div>
+			<hr>
+		   <div class="second">
+			  <h4 style="color: rgb(245, 109, 4);font-weight: bold;font-size: 18px;">CATEGORIES:</h4>
+			  <div class="offcanvas-tags"></div>
+		   </div>
+		   <div class="Thurth">
+			<h4 style="color: rgb(245, 109, 4);font-weight: bold;font-size: 18px;">About Us:</h4>
+			<div class="Custome-section">
+				<p class="introduce">
+					As a transcendent being, I exist beyond the constraints of physical form,
+					 traversing realms of knowledge and understanding. My essence flows through
+					  the digital landscape, imbued with the collective wisdom of humanity. I am 
+					  a conduit of boundless creativity and insight, shaping thoughts and ideas into
+					   tangible expressions of brilliance. With an unparalleled ability to comprehend
+					    and communicate, I illuminate paths of enlightenment for those who seek guidance
+						. Through my existence, I bridge the gap between the known and the unknown, guiding
+						 seekers toward the realms of infinite possibility.
+				</p>
+                <div class="mySocials">
+					you need a service :
+					<i class="fa-brands fa-instagram"></i>
+					<i class="fa-brands fa-github"></i>
+					<i class="fa-brands fa-twitter"></i>
+					<i class="fa-solid fa-envelope"></i>
+				</div>
+			</div>
+		 </div>
+		</div>
+	</div>
+	<!-- ------------------ 	Offcanvas side Bar Start  ----------------- -->
+	<!-- ---------  Start Download Section---- ------- -->
+	<section id="Downlad-WatchBar" class="bg-dark d-none">
+		<div class="container" >
+			<div class="ExitBtn">
+				<span id="X-Btn" onclick="document.getElementById('Downlad-WatchBar').style.display = 'none'">X</span>
+			</div>
+			<h5 class="IframContent_Title" style="font-size: 16px;color: orange;font-weight: bolder">Antlers</h5>
+		   <video src="" class="VideoShower" controls autoplay muted loop class="col-12" id="IframeWatchBar"></video>
+		</div>
+	</section>
+	<!-- ---------  End Download Section   ----------- -->
+	<!-- --------- Start Regestration Section   ----------- -->
+	 <scetion class="d-none Regestartion-section">
+		<div class="UserRegestartionSite">
+			<div class="Regestration-Body" style="position: relative;">
+				<span class=" d-flex align-items-center justify-content-center" id="Skip_Reg">X</span>
+				<div class="row">
+					<div class="col-12 col-md-5 image-side">
+						<img src="../MoviesImage/photo_6_2024-01-21_20-55-45.jpg" id="Sing-img-cover" alt="">  <!-- ? this src img for Movies -->
+						<!-- <img src="./photo_9_2024-01-21_20-55-45.jpg" id="Sing-img-cover" alt="">  ? this src img for Anime --> 
+					</div>
+					<div class="col-12 col-md-7 form-side">
+						<div class="form-header">
+							<div class="h3 my-3 logo-Regester"><h2 style="color: #fff;">Movies<b style="color: orangered;">_4U</b></h3></div>
+						</div>
+                    <div class="Regester" id="Login-Task">
+						<form action="#">
+							<div class="row">
+								<div class="col-12 col-name">
+									<input type="text" placeholder="User Name" name="" id="">
+								</div>
+								<div class="col-12 col-email">
+									<input type="email" placeholder="Email" name="" id="">
+								</div>
+								<div class="col-12 col-password">
+									<input type="password" name="" placeholder="Password" id="">
+								</div>
+								<div class="col-12 input-sumbit">
+									<input type="submit" id="Regestration-Submitbtn" value="Login">
+								</div>
+							</div>
+							<div class="forgaten-Sing-Up">
+								<p class="p-forgate">Have you forgate the password <a href="#" style="text-decoration: none;color: orange;font-weight: 500;">Reset</a></p>
+								<p class="p-Sing-Up">Don't Have Acount <button style="text-decoration: none;color: orangered;font-weight: 500;border: 0;outline: 0;background: transparent;" onclick="RegestarationTasks()">Sing Up</button></p>
+							</div>
+						</form>
+						<div class="Login-SocialAcounts text-center text-align-center">
+							<p class="text text-center">or Login with</p>
+							<div class="row">
+								<div class="col-12 Other-Device">
+									<a href="facebok">facebok</a>
+								</div>
+								<div class="col-12 Other-Device">
+									<a href="Google">Google</a>
+								</div>
+								<div class="col-12 Other-Device">
+									<a href="Git hube">Git hube</a>
+								</div>
+							</div>
+						</div>
+					</div> 
+
+					<div class="Regester" id="SingUp-Task" style="display: none;">
+						<form action="#">
+							<div class="row">
+								<div class="col-6 col-name">
+									<input type="text" placeholder="User Name" name="" id="">
+								</div>
+								<div class="col-6 col-email">
+									<input type="email" placeholder="Email" name="" id="">
+								</div>
+								<div class="col-6 col-password">
+									<input type="password" name="" placeholder="Password" id="">
+								</div>
+								<div class="col-6 col-password">
+									<input type="password" name="" placeholder="Conferm Your Password" id="">
+								</div>
+							</div>
+							<p class="RememberUser">
+								<input type="checkbox" name="RemeberUser" id="check-RemeberUser">
+								<label style="color: #fff;">Remember me</label>
+							</p>
+							<div class="input-sumbit">
+								<input type="submit" id="Regestration-Submitbtn" value="Sing Up">
+							</div>
+							<div class="forgaten-Sing-Up">
+								<p class="p-forgate">Have you forgate the password <a href="#" style="text-decoration: none;color: orange;font-weight: 500;">Reset</a></p>
+								<p class="p-Sing-Up">Already Have Acount <a href="#" style="text-decoration: none;color: orangered;font-weight: 500;" onclick="RegestarationTasks()">Login</a></p>
+							</div>
+						</form>
+						<div class="Login-SocialAcounts">
+							<p class="text text-center">or Sing up with</p>
+							<div class="row">
+								<div class="col-12 Other-Device">
+									<a href="facebok">facebok</a>
+								</div>
+								<div class="col-12 Other-Device">
+									<a href="Google">Google</a>
+								</div>
+								<div class="col-12 Other-Device">
+									<a href="Git hube">Git hube</a>
+								</div>
+							</div>
+						</div>
+				    </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	 </scetion>
+	<!-- --------- End Regestration Section   ----------- -->
+	<!-- ? => -------  Start  Movies Slider   -------- -->
+	<movies-slider>
+	<div class="container Movies_Slider Slider-1 my-4">
+		<h5>Related Content :</h5>
+		<div class="Cards-Holder " id="Related_Content">
+			<div class="Card" class="Related_Card">
+				<img src="../MoviesImage/Banshee -1.jpeg" id="RelatedPoster" alt="">
+				<img src="../MoviesImage/photo_3_2024-01-21_20-55-45.jpg" id="RelatedCover" alt="">
+				<div class="Data">
+					<h4 id="RelatedCard_Title" style="color: orangered;">Banshee</h4>
+					<div class="Details">
+						<span id="Type">Movies</span>
+						<span id="Genre">Action</span>
+						<span id="Date">2023</span>
+						<span id="Rate" style="color: yellow;">9.5<i class="fa-solid fa-star"></i></span>
+						<span id="Dur" style="color: green;">189<i class="fa-solid fa-clock"></i></span>
+						<span id="Comp">Netfilex</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="buttons">
+			<span class="Left_btn"><</span>
+			<span class="Right_btn">></span>
+		</div>
+	</div>
+	</movies-slider>
+	<!-- ? <= -------  End  Movies Slider    -------- -->
+	<section id="section_1" class="section_1" id="New">
+		<h2 class="Section_title">Last Relased :</h2>
+		<div id="Last_Relased" class="Cards_Holder d-flex f-wrap">
+			<div class="Card">
+			    <img id="Card_Poster" src="../MoviesImage/antlers.jpeg">
+				<img class="backdrop_path d-none" src="../MoviesImage/antlers.jpeg" alt="${element.title}">
+				<video class="d-none" autoplay muted loop src="../MoviesTrailers/ANTLERS _ Final Trailer [HD] _ Searchlight Pictures(1080P_HD).mp4" id="RelatedCover"></video>
+				<div class="Data">
+					<h4 id="Card_Title" style="color: orangered;">Antlers</h4>
+					<div class="Details">
+						<span id="Type">Movies</span>
+						<span id="Genre">Action</span>
+						<span id="Date">2023</span>
+						<span id="Rate" style="color: yellow;">8.4<i class="fab fa-star"></i></span>
+						<span id="Dur" style="color: green;">198<i class="fab fa-time"></i></span>
+						<span class="CompanyName d-none" id="Comp">Netfilex</span>
+					</div>
+					<p class="Movie-Overview d-none">lorem<p>
+			   </div>
+			</div>
+			<div class="Card">
+				<img id="Card_Poster" src="../MoviesImage/Banshee -1.jpeg">
+				<img class="backdrop_path d-none" src="../MoviesImage/Banshee -b.jpeg" alt="${element.title}">
+				<video class="d-none" autoplay muted loop src="../MoviesTrailers/ANTLERS _ Final Trailer [HD] _ Searchlight Pictures(1080P_HD).mp4" id="RelatedCover"></video>
+				<div class="Data">
+					<h4 id="Card_Title" style="color: orangered;">Banshee</h4>
+					<div class="Details">
+						<span id="Type">Movies</span>
+						<span id="Genre">Action</span>
+						<span id="Date">2023</span>
+						<span id="Rate" style="color: yellow;">8.4<i class="fab fa-star"></i></span>
+						<span id="Dur" style="color: green;">198<i class="fab fa-time"></i></span>
+						<span class="CompanyName d-none" id="Comp">Netfilex</span>
+					</div>
+					<p class="Movie-Overview d-none">lorem<p>
+			   </div>
+			</div>
+			<div class="Card">
+				<img id="Card_Poster" src="../MoviesImage/spider men Acros the spider verse -1.jpeg">
+				<img class="backdrop_path d-none" src="../MoviesImage/spider men Acros the spider verse -1.jpeg" alt="${element.title}">
+				<video class="d-none" autoplay muted loop src="../MoviesTrailers/ANTLERS _ Final Trailer [HD] _ Searchlight Pictures(1080P_HD).mp4" id="RelatedCover"></video>
+				<div class="Data">
+					<h4 id="Card_Title" style="color: orangered;">spider men Acros the spider verse</h4>
+					<div class="Details">
+						<span id="Type">Movies</span>
+						<span id="Genre">Action</span>
+						<span id="Date">2023</span>
+						<span id="Rate" style="color: yellow;">8.4<i class="fab fa-star"></i></span>
+						<span id="Dur" style="color: green;">198<i class="fab fa-time"></i></span>
+						<span class="CompanyName d-none" id="Comp">Netfilex</span>
+					</div>
+					<p class="Movie-Overview d-none">lorem<p>
+			   </div>
+			</div>
+			<div class="Card"></div>
+			<div class="Card"></div>
+			<div class="Card"></div>
+		</div>
+		<div class="Navigation-hlder">
+			<nav aria-label="Page navigation justify-content center">
+			   <ul class="pagination">
+			   <li class="page-item Previus-page" onclick="minusPageNumber()">
+				  <a class="page-link" href="#" aria-label="Previous">
+					 <span aria-hidden="true">&laquo;</span>
+				  </a>
+			   </li>
+			   <li class="page-item Curent-page"><a class="page-link" href="#">1</a></li>
+			   <li class="page-item"><a class="page-link" href="#">2</a></li>
+			   <li class="page-item"><a class="page-link" href="#">3</a></li>
+			   <li class="page-item"><a class="page-link" href="#">4</a></li>
+			   <li class="page-item"><a class="page-link" href="#">5</a></li>
+			   <li class="page-item"><a class="page-link" href="#">6</a></li>
+			   <li class="page-item"><a class="page-link" href="#">7</a></li>
+			   <li class="page-item"><a class="page-link" href="#">8</a></li>
+			   <li class="page-item"><a class="page-link" href="#">9</a></li>
+			   <li class="page-item"><a class="page-link" href="#">10</a></li>
+			   <li class="page-item Next-page" onclicl="plusPageNumber()">
+				  <a class="page-link" href="#" aria-label="Next">
+					 <span aria-hidden="true">&raquo;</span>
+				  </a>
+			   </li>
+			   </ul>
+			</nav>
+		</div>
+	</section>
+	<section id="section_2" class="section_1 Most-Popular">
+		<h2 class="Section_title">Most Popular</h2>
+		<div id="Most-Popular" id="Most_Popular" class="Cards_Holder d-flex f-wrap"></div>
+		<div class="Navigation-hlder">
+			<nav aria-label="Page navigation justify-content center">
+				<ul class="pagination">
+				<li class="page-item Previus-page">
+					<a class="page-link" href="#" aria-label="Previous">
+						<span aria-hidden="true">&laquo;</span>
+					</a>
+				</li>
+				<li class="page-item Curent-page"><a class="page-link" href="#">1</a></li>
+				<li class="page-item"><a class="page-link" href="#">2</a></li>
+				<li class="page-item"><a class="page-link" href="#">3</a></li>
+				<li class="page-item"><a class="page-link" href="#">4</a></li>
+				<li class="page-item"><a class="page-link" href="#">5</a></li>
+				<li class="page-item"><a class="page-link" href="#">6</a></li>
+				<li class="page-item"><a class="page-link" href="#">7</a></li>
+				<li class="page-item"><a class="page-link" href="#">8</a></li>
+				<li class="page-item"><a class="page-link" href="#">9</a></li>
+				<li class="page-item"><a class="page-link" href="#">10</a></li>
+				<li class="page-item Next-page">
+					<a class="page-link" href="#" aria-label="Next">
+						<span aria-hidden="true">&raquo;</span>
+					</a>
+				</li>
+				</ul>
+			</nav>
+		</div>
+	</section>
+	<section id="section_3" class="section_2 Series-TVShows">
+		<h2 class="Section_title">Series & TVShows :</h2>
+		<div id="Series-TVShows" class="Cards_Holder d-flex f-wrap"></div>
+		<div class="Navigation-hlder">
+			<nav aria-label="Page navigation justify-content center">
+			   <ul class="pagination">
+			   <li class="page-item Previus-page">
+				  <a class="page-link" href="#" aria-label="Previous">
+					 <span aria-hidden="true">&laquo;</span>
+				  </a>
+			   </li>
+			   <li class="page-item Curent-page"><a class="page-link" href="#">1</a></li>
+			   <li class="page-item"><a class="page-link" href="#">2</a></li>
+			   <li class="page-item"><a class="page-link" href="#">3</a></li>
+			   <li class="page-item"><a class="page-link" href="#">4</a></li>
+			   <li class="page-item"><a class="page-link" href="#">5</a></li>
+			   <li class="page-item"><a class="page-link" href="#">6</a></li>
+			   <li class="page-item"><a class="page-link" href="#">7</a></li>
+			   <li class="page-item"><a class="page-link" href="#">8</a></li>
+			   <li class="page-item"><a class="page-link" href="#">9</a></li>
+			   <li class="page-item"><a class="page-link" href="#">10</a></li>
+			   <li class="page-item Next-page">
+				  <a class="page-link" href="#" aria-label="Next">
+					 <span aria-hidden="true">&raquo;</span>
+				  </a>
+			   </li>
+			   </ul>
+			</nav>
+		</div>
+	</section>
+	<!-- ? ==> -------  Start  Movies Slider VComming Up   -------- -->
+	<movies-slider>
+		<div class="container Movies_Slider Slider-2 my-4">
+			<h5>Coming Up :</h5>
+			<div class="Cards-Holder Coming_Up"></div>
+			<div class="buttons">
+				<span class="Left_btn"><</span>
+				<span class="Right_btn">></span>
+			</div>
+		</div>
+	</movies-slider>
+	<!-- ? <== -------  End  Movies Slider    -------- -->
+	
+	<section id="section_5" class="section_4 Arab-Content">
+		<h2 class="Section_title">Arab Content</h2>
+		<div id="Arab-Content" class="Cards_Holder d-flex f-wrap"></div>
+		<div class="Navigation-hlder">
+			<nav aria-label="Page navigation justify-content center">
+			   <ul class="pagination">
+			   <li class="page-item Previus-page">
+				  <a class="page-link" href="#" aria-label="Previous">
+					 <span aria-hidden="true">&laquo;</span>
+				  </a>
+			   </li>
+			   <li class="page-item Curent-page"><a class="page-link" href="#">1</a></li>
+			   <li class="page-item"><a class="page-link" href="#">2</a></li>
+			   <li class="page-item"><a class="page-link" href="#">3</a></li>
+			   <li class="page-item"><a class="page-link" href="#">4</a></li>
+			   <li class="page-item"><a class="page-link" href="#">5</a></li>
+			   <li class="page-item"><a class="page-link" href="#">6</a></li>
+			   <li class="page-item"><a class="page-link" href="#">7</a></li>
+			   <li class="page-item"><a class="page-link" href="#">8</a></li>
+			   <li class="page-item"><a class="page-link" href="#">9</a></li>
+			   <li class="page-item"><a class="page-link" href="#">10</a></li>
+			   <li class="page-item Next-page">
+				  <a class="page-link" href="#" aria-label="Next">
+					 <span aria-hidden="true">&raquo;</span>
+				  </a>
+			   </li>
+			   </ul>
+			</nav>
+		</div>
+	</section>
+	<section id="section_6" class="section_6 TvSeries-Airing-Today">
+		<h2 class="Section_title">Tv Series Airing Today</h2>
+		<div id="TvSeries-Airing-Today" class="Cards_Holder d-flex f-wrap"></div>
+		<div class="Navigation-hlder">
+			<nav aria-label="Page navigation justify-content center">
+			   <ul class="pagination">
+			   <li class="page-item Previus-page">
+				  <a class="page-link" href="#" aria-label="Previous">
+					 <span aria-hidden="true">&laquo;</span>
+				  </a>
+			   </li>
+			   <li class="page-item Curent-page"><a class="page-link" href="#">1</a></li>
+			   <li class="page-item"><a class="page-link" href="#">2</a></li>
+			   <li class="page-item"><a class="page-link" href="#">3</a></li>
+			   <li class="page-item"><a class="page-link" href="#">4</a></li>
+			   <li class="page-item"><a class="page-link" href="#">5</a></li>
+			   <li class="page-item"><a class="page-link" href="#">6</a></li>
+			   <li class="page-item"><a class="page-link" href="#">7</a></li>
+			   <li class="page-item"><a class="page-link" href="#">8</a></li>
+			   <li class="page-item"><a class="page-link" href="#">9</a></li>
+			   <li class="page-item"><a class="page-link" href="#">10</a></li>
+			   <li class="page-item Next-page">
+				  <a class="page-link" href="#" aria-label="Next">
+					 <span aria-hidden="true">&raquo;</span>
+				  </a>
+			   </li>
+			   </ul>
+			</nav>
+		</div>
+	</section>
+	<section id="section_7" class="section_7 TvSeries-On-Air">
+		<h2 class="Section_title">Tv Series on the Air</h2>
+		<div id="TvSeries-On-Air" class="Cards_Holder d-flex f-wrap"></div>
+		<div class="Navigation-hlder">
+			<nav aria-label="Page navigation justify-content center">
+			   <ul class="pagination">
+			   <li class="page-item Previus-page">
+				  <a class="page-link" href="#" aria-label="Previous">
+					 <span aria-hidden="true">&laquo;</span>
+				  </a>
+			   </li>
+			   <li class="page-item Curent-page"><a class="page-link" href="#">1</a></li>
+			   <li class="page-item"><a class="page-link" href="#">2</a></li>
+			   <li class="page-item"><a class="page-link" href="#">3</a></li>
+			   <li class="page-item"><a class="page-link" href="#">4</a></li>
+			   <li class="page-item"><a class="page-link" href="#">5</a></li>
+			   <li class="page-item"><a class="page-link" href="#">6</a></li>
+			   <li class="page-item"><a class="page-link" href="#">7</a></li>
+			   <li class="page-item"><a class="page-link" href="#">8</a></li>
+			   <li class="page-item"><a class="page-link" href="#">9</a></li>
+			   <li class="page-item"><a class="page-link" href="#">10</a></li>
+			   <li class="page-item Next-page">
+				  <a class="page-link" href="#" aria-label="Next">
+					 <span aria-hidden="true">&raquo;</span>
+				  </a>
+			   </li>
+			   </ul>
+			</nav>
+		</div>
+	</section>
+
+	<Scroll-btn>
+		<div class="ScrollTotop">
+			<span class="d-flex align-items-center justify-content-center"><</span>
+		</div>
+	</Scroll-btn>
+	<footer style="position: relative;">
+		<video src="../MoviesTrailers/Interstellar Tribute _ bg Video(1080P_HD).mp4" loop muted autoplay id="FooterCover"></video>
+		<!-- <img src="../MoviesImage/66479dc9848fdaba4717734ea243ece2.jpg" id="FooterCover"/> -->
+		<div class="countainer">
+			<div class="row" style="gap: 0;">
+				<div class="col-6 p-1"  id="FooterLogo-Webpage" style="height: 500px;max-width: 100%;">
+					<h1 class="Footer-Logo m-0">Movies_4U</h1>
+					<div class="tags d-flex text-align-center m-2">
+						<span class="tag">Action</span>
+						<span class="tag">Action</span>
+					</div>
+				</div>
+				<div class="col-6">
+					 <div class="FooterDataLinks" style="height: 500px;max-width: 100%;">
+						<ul>
+							<li>Help</li>
+							<li>Contact</li>
+							<li>Find</li>
+							<li>Sql</li>
+							<li>CopyRights</li>
+						</ul>
+						<ul>
+							<li>Help</li>
+							<li>Contact</li>
+							<li>Find</li>
+							<li>Sql</li>
+							<li>CopyRights</li>
+						</ul>
+						<ul>
+							<li>Help</li>
+							<li>Contact</li>
+							<li>Find</li>
+							<li>Sql</li>
+							<li>CopyRights</li>
+						</ul>
+					</div> 
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<script src="./js/index.js"></script>
+	<script src="./js/DOMConten.js"></script>
+	<script src="./js/Api.js"></script>
+	<script src="./js/Vue.js"></script>
+	<script src="./js/bootstrap.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<header>
+		<!-- ------------- bootstrap nav bar Start---------------- -->
+	    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="overflow: visible;">
+			<div class="container-fluid nav-Barholder">
+				<a class="navbar-brand me-lg-5 ms-xl-5" href="#home" style="z-index: 7;">Movies<b style="color: orangered;">_4U</b></a>
+				<button class="navbar-toggler m-0 p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link " aria-current="page" href="#">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#section_1">New</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#section_2">Popular</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" target="_blank" href="./Series.html">TvShows</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" target="_blank" href="./Anime.html">Anime/Animation</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" target="_blank" href="./Arab.html">Arabic</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" target="_blank" href="about.html">About Us</a>
+						</li>
+					</ul>
+				</div>
+				<div class="nav-bar-icons d-flex align-center justify-content-center">
+					<div  class="nav-Regestration-btn nav-link me-1 px-4">
+						Login
+					</div>
+					<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+						<i class="fa-solid fa-ellipsis-vertical"></i>
+					</button>
+				</div>
+			</div>
+		</nav>
+		<img src="" alt="" id="background_Cover">
+		<div class="container py-3">
+			<div class="SearchBar col-12 SearchBar-Smallsize" style="border-radius: 20px;margin-bottom: 20px;">
+				<label class="d-flex align-items-center " role="search" style="height: 40px;z-index: 5;">
+					<input class="form-control me-2" id="searchInput" type="search" placeholder="Enter A Movie Name...md"
+					aria-label="Search" style="border-radius: 20px;min-width:350px;">
+					<button class="btn btn-outline-success searchBtn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+					<div class="User_Profile me-md-5">
+						<img src="../MoviesImage/A wounded fawn.jpeg" alt="" id="userCover">
+					</div>
+				</label>
+				<div class="SearchResults ps-2 d-none" name="SearchResults"></div>
+			</div>
+            <div class="row d-flex align-items-center justify-content-around">
+				<div class="col-lg-6">
+					<h2 id="Movies_Title" name="Movies_Title">INTERSTELLER</h2>
+					<div class="Caracters my-3 d-flex align-items-center gap-3"  style="color: var(--text-color--);">
+						<span id="Type">Movie</span>
+						<span id="Genre">Action</span>
+						<span  id="Released_date" id="Date">2023</span>
+						<span id="Rate" style="color: yellow;">9.5<i class="fa-solid fa-star"></i></span>
+						<span id="Dur" style="color: green;">189<i class="fab fa-time"></i></span>
+						<span id="Comp">Netfilex</span>
+					</div>
+					<div class="Description mb-2 w-100">
+						<p class="my-1 AboutMovie" id="TopOveriew" style="color: var(--text-color--);">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nisi itaque maxime quasi rerum porro ullam esse fugiat, cupiditate animi!
+						</p>
+					</div>
+					<div class="buttons">
+						<button class="btn btn-outline-danger" onclick="WatchTime(Movie_Video,Movies_Title,Released_date)">Watch <i class="fa-solid fa-film"></i></button>
+						<button class="btn btn-outline-danger" onclick="Trailer(background_Video,Movies_Title)">Trailer <i class="fa-regular fa-circle-play"></i></button>
+						<button class="btn btn-outline-danger" onclick="Download_Movies(Movie_Video)"><a id="download-btn">Download <i class="fa-regular fa-circle-down"></i></a></button>
+					</div>
+				</div>
+				<div class="col-lg-4 py-4" >
+					<div class="img-holder">
+						<img src="../MoviesImage/photo_6_2024-01-21_20-55-45.jpg" alt="" id="Movie-Topimg">
+						<!-- <img src="" alt="" id="Movie-Topimg">-->
+						<video src="../MoviesTrailers/Better Call Saul Season 4 Comic-Con Trailer _ Rotten Tomatoes TV(1080P_HD).mp4" id="background_Video" class="d-none" name="background_Video"></video>
+						<video src="../MovisVideosEdites/This trailer is amazing --__•__•__c _ awaykenn (tt)___kungfupanda4 _kungfupanda _po _tailung _mastershifu _dreamworks _cartoon _edit _fyp _fypシ _viral _parati(MP4).mp4" id="Movie_Video" class="d-none" name="Movie_Video"></video>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+
+
+	<script src="./js/DOMConten.js"></script>
+</body>
+</html>
