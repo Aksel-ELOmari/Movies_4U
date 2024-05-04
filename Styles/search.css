@@ -1,0 +1,366 @@
+
+/*! --------- End Global Classes // Styles--------- */
+/* --------------------  Unic --------------------*/
+a{text-decoration: none;color: var(--Color-White);}
+a:hover{text-decoration: none;color: var(--main-Color);}
+.show{display: block;}
+.hide{display: none;}
+.align-center{text-align: center;}
+.All_vh{min-height:100vh;width: 100%;}
+.Half_vh{min-height:50vh;width: 100%;}
+button{cursor: pointer;border: 0;outline: 0;}
+.special{color: var(--main-Color);}
+.text-center{text-align: center;}
+
+
+.btn-x{
+    cursor: pointer;
+    padding: .5rem .6rem;
+    border-radius: 50%;
+    background: #eeeeeea4;
+    color: var(--Color-White);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-x:hover{color: rgb(255, 210, 8);}
+/* --------------------  Unic --------------------*/
+
+/* --------------------  FLEX BOX --------------------*/
+.flex-column{
+    flex-direction: column;
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
+.flex-center
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flex-around
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.flex-between
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.flex-start{
+    display: flex;
+    align-items: flex-start;
+}
+.flex-end{
+    display: flex;
+    align-items: flex-end;
+}
+/* --------------------  FLEX BOX --------------------*/
+/* --------------------  GAPS --------------------*/
+.gap-1{display: flex;gap: .1em;}
+.gap-2{display: flex;gap: .2em;}
+.gap-3{display: flex;gap: .3em;}
+.gap-4{display: flex;gap: .4em;}
+.gap-5{display: flex;gap: .5em;}
+.gap-6{display: flex;gap: .6em;}
+.gap-7{display: flex;gap: .7em;}
+.gap-8{display: flex;gap: .8em;}
+.gap-9{display: flex;gap: .9em;}
+.gap-10{display: flex;gap: .10em;}
+/*? margins*/
+.m-auto{margin:auto;}
+.mx-1{margin: .1rem 0;}
+.mx-2{margin: .2rem 0;}
+.mx-3{margin: .3rem 0;}
+.mx-4{margin: .4rem 0;}
+.mx-5{margin: .5rem 0;}
+.mx-6{margin: .6rem 0;}
+.mx-7{margin: .7rem 0;}
+.mx-8{margin: .8rem 0;}
+.mx-9{margin: .9rem 0;}
+.mx-10{margin: .10rem 0;}
+.my-1{margin: .1rem 0;}
+.my-2{margin: .2rem 0;}
+.my-3{margin: .3rem 0;}
+.my-4{margin: .4rem 0;}
+.my-5{margin: .5rem 0;}
+.my-6{margin: .6rem 0;}
+.my-7{margin: .7rem 0;}
+.my-8{margin: .8rem 0;}
+.my-9{margin: .9rem 0;}
+.my-10{margin: .10rem 0;}
+.py-height{margin: 1rem 0;}
+.px-height{margin:0 1rem;}
+/*? paddings */
+.px-1{margin: .1rem 0;}
+.px-2{margin: .2rem 0;}
+.px-3{margin: .3rem 0;}
+.px-4{margin: .4rem 0;}
+.px-5{margin: .5rem 0;}
+.px-6{margin: .6rem 0;}
+.px-7{margin: .7rem 0;}
+.px-8{margin: .8rem 0;}
+.px-9{margin: .9rem 0;}
+.px-10{margin: .10rem 0;}
+.py-1{margin: .1rem 0;}
+.py-2{margin: .2rem 0;}
+.py-3{margin: .3rem 0;}
+.py-4{margin: .4rem 0;}
+.py-5{margin: .5rem 0;}
+.py-6{margin: .6rem 0;}
+.py-7{margin: .7rem 0;}
+.py-8{margin: .8rem 0;}
+.py-9{margin: .9rem 0;}
+.py-10{margin: .10rem 0;}
+/* --------------------  GAPS --------------------*/
+
+/* --------------------  Buttons --------------------*/
+.btn{
+    padding: 10px 20px;
+    border-radius:8px;
+    border: 0;
+    outline: 0;
+    font-weight: 600;
+    margin: 0 .2rem;
+}
+.btn-radius{
+    padding: 10px 20px;
+    border-radius:20px;
+    border: 0;
+    outline: 0;
+    font-weight: 600;
+    margin: 0 .2rem;
+}
+/* --------------------  Buttons --------------------*/
+/*! --------- End Global Classes // Styles--------- */
+
+
+
+/*? the search bar styling */
+#All__genres{
+    user-select: none;
+    -webkit-user-select:none;
+}
+.SearchBar
+{
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   width: 100%;
+   margin-top: 1.4rem;
+   z-index: 10;
+   /* display: none; */
+}
+
+#searchbtn
+{
+    background: orangered;
+    border-radius: 0 30px 30px 0;
+}
+.SearchBar form
+{
+    position: relative;
+    height: 40px;
+    width: 70%;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 30px;
+    box-shadow: 2px 2px 12px -3px #fff;
+    /* overflow: hidden; */
+    margin: .6rem auto;
+}
+.SearchBar #Select-box{
+    height: 100%;
+    border: 0;
+    outline: 0;
+    padding: 0 .4rem ;
+    border-radius: 30px 0  0 30px;
+    background: orange;
+    font-weight: bold;
+    cursor: pointer;
+}
+.GenresFilter li a
+{
+    color: var(--favourite-color);
+    font-weight: 400;
+    padding: 8px 0;
+}
+.GenresFilter li a:hover{color: blue;}
+.SearchBar form input
+{
+    background: transparent;
+    padding: 0 20px;
+    color: var(--them-color);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    height: 100%;
+    width: 90%;
+    border: 0;
+    outline: 0;
+}
+.SearchBar form input::placeholder
+{
+    color: rgba(255, 255, 0, 0.534);
+    font-style: italic;
+    font-size: 15px;
+}
+
+.SearchBar form label
+{
+    height: 100%;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#searchResults 
+{
+    max-height: 300px;
+    height: 300px;
+    width: 70%;
+    border-radius: 23px;
+    padding:.5rem;
+    margin-top:.5rem;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: max-content;
+    height: fit-content;
+    /* display: none; */
+}
+.showMore-btn
+#searchResults::-webkit-scrollbar
+{
+    width: 4px;
+    border-radius: 20px;
+    background: #eeee;
+}
+
+#searchResults::-webkit-scrollbar-thumb
+{
+    width: 4px;background: orangered;border-radius: 20px;
+}
+#searchResults .SearchMovieCard
+{
+    min-height: 45px;
+    height: 45px;
+    width: 80%;
+    max-width: 100%;
+    padding: 0 .4rem;
+    text-decoration: none;
+    margin: .3rem 0;
+    color: #000;
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+}
+#searchResults .SearchMovieCard img
+{
+    height: 40px;
+    width: 34px;
+    border-radius: 0;
+}
+#searchResults .SearchMovieCard h4
+{
+    font-style: italic;
+    text-shadow: 2px 2px 12px #000;
+    color: orange;
+}
+#searchResults .SearchMovieCard .MovieNum
+{
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+}
+#searchResults .SearchMovieCard .MovieNum .Movie-Rate{
+    display: flex;
+}
+
+
+/*-------- Styling the Genres electer ---------*/
+.selecter-genre,.viewMore_btn span
+{
+    padding: 12px 20px;
+    background: transparent !important;
+    color: #fff !important;
+    border-radius: 20px !important;
+    border: solid 1px #fff;
+    cursor: pointer;
+}
+.irgha,.selecter-genre:hover,.viewMore_btn span:hover
+{
+    padding: 12px 20px;
+    background: orangered !important;
+    color: #000 !important;
+    box-shadow: 2px 2px 12px -3px #fff !important;
+    box-shadow: inset 2px 2px 12px  #000 !important;
+    border-radius: 20px !important;
+    border: 0;
+    cursor: pointer;
+}
+.Genres__Options {
+    width: 70%;
+    margin: 0 auto;
+}
+.Genres__Options ul{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    height: fit-content;
+    width: 100%;
+    gap:.3rem;
+    padding: 1rem 0;
+}
+.Genres__Options ul li{
+    list-style: none;
+    margin-top:1.5rem;
+}
+
+/*? the search bar styling Ends */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 678px) {
+    #searchResults .SearchMovieCard .MovieNum .Movie-Genre,
+    #searchResults .SearchMovieCard .MovieNum .Movie-Comp,
+    #searchResults .SearchMovieCard .MovieNum .Movie-Dur,
+    #searchResults .SearchMovieCard .MovieNum .Movie-Type
+    {
+        display: none;
+    }
+    #searchResults .SearchMovieCard h4{
+        word-break:keep-all;
+        --max-lines: 1;
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: var(--max-lines);
+    }
+    
+}

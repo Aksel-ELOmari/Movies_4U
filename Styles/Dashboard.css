@@ -1,0 +1,300 @@
+.tabtn
+{
+  outline: 0;
+  cursor: pointer;
+  padding: .4rem .8rem;
+  border-radius: 14px;
+  border: solid .6px #ffff;
+}
+.main-section{
+    height: 80vh;
+    display: flex;
+    align-items: center;
+}
+.main-section .docker-1
+{
+    height: 100%;
+    width: 18%;
+}
+.main-section .docker-2
+{
+    height: 100%;
+    width: 80%;
+    
+}
+/* ////////////////////////////// */
+.main-section .docker-1 .D1P1
+{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   flex-direction: column;
+   text-align: center;
+}
+.main-section .docker-1 .D1P1 .profile_side
+{
+   margin: 1rem 0;
+   text-align: center;
+}
+.main-section .docker-1 .D1P1 .profile_side h4
+{
+   margin-bottom: 1rem;
+}
+.main-section .docker-1 .D1P1 .profile_side .img
+{
+    border-radius: 50%;
+    height: 4.4rem;
+    width: 4.4rem;
+    margin-bottom: .5rem;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 3px red;
+}
+.main-section .docker-1 .D1P1 .profile_side .User_img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.main-section .docker-1 .D1P1 .profile_side .img:hover .switch-img
+{
+   opacity: 1;
+}
+.switch-img
+{
+    color: red;
+    opacity: 0;
+   transition: .3s linear;
+   padding: .4rem;
+   font-size: 23px;
+   border-radius: 50%;
+}
+.main-section .docker-1 .D1P1 .edit-btn
+{
+    font-style: initial;
+    font-size: 13px;
+    opacity: .7;
+}
+
+.main-section .docker-1 .D1P1 .dash_links
+{
+    margin: 1rem auto;
+    overflow: scroll hidden;
+}
+.main-section .docker-1 .D1P1 .dash_links::-webkit-scrollbar{display: none;}
+.main-section .docker-1 .D1P1 .dash_links div
+{
+    display: flex;
+    align-items: center;
+    line-height: 30px;
+    border: solid 1px #fff;
+    margin: .5rem 0;
+    padding: .3rem .6rem;
+    border-radius: 12px;
+    cursor: pointer;
+}
+.main-section .docker-1 .D1P1 .dash_links .active_dash
+{
+    background: #700909;
+    color: #fff;
+}
+.main-section .docker-1 .D1P1 .lights
+{
+    margin-top: 40%;
+}
+.moods
+{
+    border: solid .7px #fff;
+    padding: .3rem .6rem;
+    border-radius: 9px;
+}
+@media (max-width:767px)
+{
+    .main-section .docker-1 .D1P1 .lights
+    {
+        margin-top: 100%;
+    }
+}
+
+.main-section .docker-2 .Cards_holder
+{
+   height: 100%;
+   width: 100%;
+   flex-wrap: wrap;
+   display: flex;
+   align-items: center;
+}
+.main-section .docker-2 .Cards_holder .Card-item
+{
+    border: solid 1px #fff;
+    height: 15rem;
+    width: 18rem;
+    position:relative;
+    margin:1rem;
+    border-radius: 9px;
+    flex-grow: 1;
+    overflow: hidden;
+}
+.main-section .docker-2 .Cards_holder .Card-item .Card-title
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin:.5rem auto;
+}
+.main-section .docker-2 .Cards_holder .Card-item .Card-footer
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: absolute;
+    bottom: .4rem;
+    left: 5%;
+    width: 90%;
+}
+.main-section .docker-2 .Cards_holder .Card-item  .footer-center,
+.main-section .docker-2 .Cards_holder .Card-item  .Only-title
+{
+     margin-left: 50%;
+    -webkit-translate: -50% 0;
+    translate: -50% 0;
+    white-space: nowrap;
+
+}
+.main-section .docker-2 .Cards_holder .Card-item .Card-footer .footer-center
+{
+    padding: 10px 20px;
+    white-space: nowrap;
+    background: orangered !important;
+    color: #000 !important;
+    box-shadow: 2px 2px 12px -3px #fff !important;
+    box-shadow: inset 2px 2px 12px  #000 !important;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.main-section .docker-2 .Cards_holder .Card-item .Card_soul
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+
+/* /////////////////////// */
+.Days
+{
+    text-align: center;
+    padding: .4rem;
+    border: solid 1px #fff;
+    margin: 0 .5rem;
+    border-radius: 8px;
+}
+.Days:nth-child(2){background: rgb(255, 145, 0);color: #000;}
+.full-report .Card-footer
+{
+    height: 40px;
+    width: 100%;
+    border-radius: 30px;
+
+    background: orangered !important;
+    color: #000 !important;
+    box-shadow: 2px 2px 12px -3px #fff !important;
+    box-shadow: inset 2px 2px 12px  #000 !important;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.full-report .Card-footer a{translate: 1rem 0;}
+.full-report .Card-footer i{translate:-1rem 0;}
+.website-traffic .Card-footer
+{
+   flex-direction: column;
+}
+.website-traffic .Card-footer .percent
+{
+   margin-left: 7rem;
+}
+.website-traffic .Card_soul
+{
+    background: rgba(136, 91, 6, 0.562);
+}
+.Rounce-rate .Card_soul
+{
+    background: #bc3908;
+}
+
+.chart img,.Card_soul img[class]
+{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    opacity: .2;
+}
+
+
+
+
+
+
+
+
+
+
+@media(max-width:745px)
+{
+    .main-section
+    {
+        flex-direction: column;
+    }
+    .main-section .docker-1
+    {
+        height: 100%;
+        width: 100%;
+    }
+    .main-section .docker-1 .D1P1
+    {
+        flex-direction: column;
+        position: relative;
+    }
+    .profile_side
+    {
+        margin-right: .3rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+    }
+    .dash_links
+    {
+        display: flex;
+        gap: 1rem;
+        margin-top: 20px;
+    }
+    .lights
+    {
+        white-space: nowrap;
+
+        position:absolute;
+        top:-167%;
+        right:34%;
+    }
+}
