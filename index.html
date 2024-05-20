@@ -2,18 +2,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <!-- Google adsense meta tag -->
-    <meta name="google-adsense-account" content="ca-pub-4118984890753236">
-    <meta name="keyword" content="watch movies, movies online, watch TV, TV online, TV shows online, watch TV shows, stream movies, stream tv, instant streaming, watch online, movies, watch movies Morocco, watch TV online, no download, full length movies">
-    <meta name="description" content="Watch Netflix movies & TV shows online or stream right to your smart TV, game console, PC, Mac, mobile, tablet and more.
-    Movies is universal search & discovery for any TV Show & Movie across Netflix, Hulu, Amazon, and hundreds of other providers in one place.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"  type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet"  type="text/css" href="./Styles/index.css">
-    <link rel="stylesheet"  type="text/css" href="./Styles/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/10.11.1/firebase-app.js" integrity="sha512-dBA6c61q2PXSh1zJW9w235DM8aV7V0LU3PEZ5olnwzgiKdEuuxQaPFMiD/QDbKjmBBPR23+jiPV+tLMhWrG1rA==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
-    <title>Movies_4U</title>
+        <meta charset="UTF-8">
+        <!-- Google adsense meta tag -->
+        <meta name="google-adsense-account" content="ca-pub-4118984890753236">
+        <!-- firebase authuarization -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/10.11.1/firebase-app.js" integrity="sha512-dBA6c61q2PXSh1zJW9w235DM8aV7V0LU3PEZ5olnwzgiKdEuuxQaPFMiD/QDbKjmBBPR23+jiPV+tLMhWrG1rA==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+        <meta name="keyword" content="watch movies, movies online, watch TV, TV online, TV shows online, watch TV shows, stream movies, stream tv, instant streaming, watch online, movies, watch movies Morocco, watch TV online, no download, full length movies">
+        <meta name="description" content="Watch Netflix movies & TV shows online or stream right to your smart TV, game console, PC, Mac, mobile, tablet and more.
+        Movies is universal search & discovery for any TV Show & Movie across Netflix, Hulu, Amazon, and hundreds of other providers in one place.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- font-awesome cli  -->
+        <link rel="stylesheet"  type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet"  type="text/css" href="./Styles/index.css">
+        <link rel="stylesheet"  type="text/css" href="./Styles/style.css">
+        <title>Movies_4U</title>
 </head>
    <body>
       <header>
@@ -26,18 +28,18 @@
                     <li class="nav-link-item"><a href="./anime.html">Anime</a></li>
                     <li class="nav-link-item"><a href="./contact.html">Contact</a></li>
                     <li class="nav-link-item nav-Sing-btn active"><a target="_blank" href="./Regester.html">Sing up</a></li>
-                    <span class="hidenavBar_btn" onclick="toggleMenu()">
+                    <template class="hidenavBar_btn" onclick="toggleMenu()">
                         <i class="fa-solid fa-x"></i>
-                    </span>
+                    </template>
                 </ul>
             </div>
-            <div class="flex" style="display: flex;align-items: center;gap:.8rem;">
+            <div class="flex gap-8">
                 <a href="./Search.html" title="link" class="btnsearch">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </a>
                 <!-- the user cover img -->
-                <a href="./Dashboard.html" class="navUser-img">
-                    <img src="" class="User_img" alt="">
+                <a href="./Dashboard.html" title="to the dashboard" class="navUser-img">
+                    <img src="./SRC/image/bgCover_Report.jpg" class="User_img" alt="">
                 </a>
                 <!-- the user cover img -->
             </div>
@@ -50,7 +52,7 @@
         <div class="carousel" id="HomeCarousel">
             <div class="list">
                 <div class="item">
-                    <img title="img" src="./image/ReadHouse.jpg">
+                    <img title="img" src="">
                 </div>
             </div>
             <div class="thumbnail">
@@ -96,21 +98,7 @@
                 <div class="section-header">
                     <h2 class="CarouselSlderTitle" data-list-id="28">Sience Finction :</h2>
                 </div>
-                <div class="CarouselSlider-inner">
-                    <div class="CarouselCard" data-id="234">
-                        <img title="img" src="./image/img1.jpg" alt="" class="MoviePoster">
-                        <img title="img" src="./image/img2.jpg" alt="" class="MovieCover">
-                         <h4 class="MovieTitle">Spider men into the spider verse</h4>
-                        <div class="MovieNum">
-                            <span class="Movie-Type">Movie</span>
-                            <span class="Movie-Genre">Action</span>
-                            <span class="Movie-Date">2023</span>
-                            <span class="Movie-Comp">HBO</span>
-                            <span class="Movie-Rate">8.4</span>
-                            <span class="Movie-Dur">190min</span>
-                        </div>
-                    </div>
-                </div>
+                <div class="CarouselSlider-inner"></div>
                 <div class="CarouselSlider-btns">
                     <button type="button" class="prev"><</button>
                     <button type="button" class="next">></button>
@@ -123,21 +111,7 @@
                 <div class="section-header">
                     <h2 class="CarouselSlderTitle" data-list-id="16">Action :</h2>
                 </div>
-                <div class="CarouselSlider-inner">
-                    <div class="CarouselCard">
-                    <img title="img" src="./image/img1.jpg" alt="" class="MoviePoster">
-                    <img title="img" src="./image/img2.jpg" alt="" class="MovieCover">
-                    <h4 class="MovieTitle">Spider men into the spider verse</h4>
-                    <div class="MovieNum">
-                        <span class="Movie-Type">Movie</span>
-                        <span class="Movie-Genre">Action</span>
-                        <span class="Movie-Date">2023</span>
-                        <span class="Movie-Comp">HBO</span>
-                        <span class="Movie-Rate">8.4</span>
-                        <span class="Movie-Dur">190min</span>
-                    </div>
-                    </div>
-                </div>
+                <div class="CarouselSlider-inner"></div>
                 <div class="CarouselSlider-btns">
                     <button type="button" class="prev"><</button>
                     <button type="button" class="next">></button>
@@ -149,21 +123,7 @@
                 <div class="section-header">
                     <h2 class="CarouselSlderTitle" data-list-id="35">Adventure :</h2>
                 </div>
-                <div class="CarouselSlider-inner">
-                    <div class="CarouselCard">
-                    <img title="img" src="./image/img1.jpg" alt="" class="MoviePoster">
-                    <img title="img" src="./image/img2.jpg" alt="" class="MovieCover">
-                    <h4 class="MovieTitle">Spider men into the spider verse</h4>
-                    <div class="MovieNum">
-                        <span class="Movie-Type">Movie</span>
-                        <span class="Movie-Genre">Action</span>
-                        <span class="Movie-Date">2023</span>
-                        <span class="Movie-Comp">HBO</span>
-                        <span class="Movie-Rate">8.4</span>
-                        <span class="Movie-Dur">190min</span>
-                    </div>
-                    </div>
-                </div>
+                <div class="CarouselSlider-inner"></div>
                 <div class="CarouselSlider-btns">
                     <button type="button" class="prev"><</button>
                     <button type="button" class="next">></button>
@@ -175,21 +135,7 @@
                 <div class="section-header">
                     <h2 class="CarouselSlderTitle" data-list-id="35">Animation :</h2>
                 </div>
-                <div class="CarouselSlider-inner">
-                    <div class="CarouselCard">
-                    <img title="img" src="./image/img1.jpg" alt="" class="MoviePoster">
-                    <img title="img" src="./image/img2.jpg" alt="" class="MovieCover">
-                    <h4 class="MovieTitle">Spider men into the spider verse</h4>
-                    <div class="MovieNum">
-                        <span class="Movie-Type">Movie</span>
-                        <span class="Movie-Genre">Action</span>
-                        <span class="Movie-Date">2023</span>
-                        <span class="Movie-Comp">HBO</span>
-                        <span class="Movie-Rate">8.4</span>
-                        <span class="Movie-Dur">190min</span>
-                    </div>
-                    </div>
-                </div>
+                <div class="CarouselSlider-inner"></div>
                 <div class="CarouselSlider-btns">
                     <button type="button" class="prev"><</button>
                     <button type="button" class="next">></button>
@@ -201,21 +147,7 @@
                 <div class="section-header">
                     <h2 class="CarouselSlderTitle" data-list-id="35">Comedy :</h2>
                 </div>
-                <div class="CarouselSlider-inner">
-                    <div class="CarouselCard">
-                    <img title="img" src="./image/img1.jpg" alt="" class="MoviePoster">
-                    <img title="img" src="./image/img2.jpg" alt="" class="MovieCover">
-                    <h4 class="MovieTitle">Spider men into the spider verse</h4>
-                    <div class="MovieNum">
-                        <span class="Movie-Type">Movie</span>
-                        <span class="Movie-Genre">Action</span>
-                        <span class="Movie-Date">2023</span>
-                        <span class="Movie-Comp">HBO</span>
-                        <span class="Movie-Rate">8.4</span>
-                        <span class="Movie-Dur">190min</span>
-                    </div>
-                    </div>
-                </div>
+                <div class="CarouselSlider-inner"></div>
                 <div class="CarouselSlider-btns">
                     <button type="button" class="prev"><</button>
                     <button type="button" class="next">></button>
@@ -227,21 +159,7 @@
                 <div class="section-header">
                     <h2 class="CarouselSlderTitle" data-list-id="35">Crime :</h2>
                 </div>
-                <div class="CarouselSlider-inner">
-                    <div class="CarouselCard">
-                    <img title="img" src="./image/img1.jpg" alt="" class="MoviePoster">
-                    <img title="img" src="./image/img2.jpg" alt="" class="MovieCover">
-                    <h4 class="MovieTitle">Spider men into the spider verse</h4>
-                    <div class="MovieNum">
-                        <span class="Movie-Type">Movie</span>
-                        <span class="Movie-Genre">Action</span>
-                        <span class="Movie-Date">2023</span>
-                        <span class="Movie-Comp">HBO</span>
-                        <span class="Movie-Rate">8.4</span>
-                        <span class="Movie-Dur">190min</span>
-                    </div>
-                    </div>
-                </div>
+                <div class="CarouselSlider-inner"></div>
                 <div class="CarouselSlider-btns">
                     <button type="button" class="prev"><</button>
                     <button type="button" class="next">></button>
@@ -253,21 +171,7 @@
                 <div class="section-header">
                     <h2 class="CarouselSlderTitle" data-list-id="35">Documentary :</h2>
                 </div>
-                <div class="CarouselSlider-inner">
-                    <div class="CarouselCard">
-                    <img title="img" src="./image/img1.jpg" alt="" class="MoviePoster">
-                    <img title="img" src="./image/img2.jpg" alt="" class="MovieCover">
-                    <h4 class="MovieTitle">Spider men into the spider verse</h4>
-                    <div class="MovieNum">
-                        <span class="Movie-Type">Movie</span>
-                        <span class="Movie-Genre">Action</span>
-                        <span class="Movie-Date">2023</span>
-                        <span class="Movie-Comp">HBO</span>
-                        <span class="Movie-Rate">8.4</span>
-                        <span class="Movie-Dur">190min</span>
-                    </div>
-                    </div>
-                </div>
+                <div class="CarouselSlider-inner"></div>
                 <div class="CarouselSlider-btns">
                     <button type="button" class="prev"><</button>
                     <button type="button" class="next">></button>
@@ -279,21 +183,7 @@
                 <div class="section-header">
                     <h2 class="CarouselSlderTitle" data-list-id="35">Drama :</h2>
                 </div>
-                <div class="CarouselSlider-inner">
-                    <div class="CarouselCard">
-                    <img title="img" src="./image/img1.jpg" alt="" class="MoviePoster">
-                    <img title="img" src="./image/img2.jpg" alt="" class="MovieCover">
-                    <h4 class="MovieTitle">Spider men into the spider verse</h4>
-                    <div class="MovieNum">
-                        <span class="Movie-Type">Movie</span>
-                        <span class="Movie-Genre">Action</span>
-                        <span class="Movie-Date">2023</span>
-                        <span class="Movie-Comp">HBO</span>
-                        <span class="Movie-Rate">8.4</span>
-                        <span class="Movie-Dur">190min</span>
-                    </div>
-                    </div>
-                </div>
+                <div class="CarouselSlider-inner"></div>
                 <div class="CarouselSlider-btns">
                     <button type="button" class="prev"><</button>
                     <button type="button" class="next">></button>
@@ -305,21 +195,7 @@
                 <div class="section-header">
                     <h2 class="CarouselSlderTitle" data-list-id="35">Family :</h2>
                 </div>
-                <div class="CarouselSlider-inner">
-                    <div class="CarouselCard">
-                    <img title="img" src="./image/img1.jpg" alt="" class="MoviePoster">
-                    <img title="img" src="./image/img2.jpg" alt="" class="MovieCover">
-                    <h4 class="MovieTitle">Spider men into the spider verse</h4>
-                    <div class="MovieNum">
-                        <span class="Movie-Type">Movie</span>
-                        <span class="Movie-Genre">Action</span>
-                        <span class="Movie-Date">2023</span>
-                        <span class="Movie-Comp">HBO</span>
-                        <span class="Movie-Rate">8.4</span>
-                        <span class="Movie-Dur">190min</span>
-                    </div>
-                    </div>
-                </div>
+                <div class="CarouselSlider-inner"></div>
                 <div class="CarouselSlider-btns">
                     <button type="button" class="prev"><</button>
                     <button type="button" class="next">></button>
@@ -331,21 +207,7 @@
                 <div class="section-header">
                     <h2 class="CarouselSlderTitle" data-list-id="80">Fantasy :</h2>
                 </div>
-                <div class="CarouselSlider-inner">
-                    <div class="CarouselCard">
-                    <img title="img" src="./image/img1.jpg" alt="" class="MoviePoster">
-                    <img title="img" src="./image/img2.jpg" alt="" class="MovieCover">
-                    <h4 class="MovieTitle">Spider men into the spider verse</h4>
-                    <div class="MovieNum">
-                        <span class="Movie-Type">Movie</span>
-                        <span class="Movie-Genre">Action</span>
-                        <span class="Movie-Date">2023</span>
-                        <span class="Movie-Comp">HBO</span>
-                        <span class="Movie-Rate">8.4</span>
-                        <span class="Movie-Dur">190min</span>
-                    </div>
-                    </div>
-                </div>
+                <div class="CarouselSlider-inner"></div>
                 <div class="CarouselSlider-btns">
                     <button type="button" class="prev"><</button>
                     <button type="button" class="next">></button>
@@ -357,21 +219,7 @@
                 <div class="section-header">
                     <h2 class="CarouselSlderTitle" data-list-id="80">History :</h2>
                 </div>
-                <div class="CarouselSlider-inner">
-                    <div class="CarouselCard">
-                    <img title="img" src="./image/img1.jpg" alt="" class="MoviePoster">
-                    <img title="img" src="./image/img2.jpg" alt="" class="MovieCover">
-                    <h4 class="MovieTitle">Spider men into the spider verse</h4>
-                    <div class="MovieNum">
-                        <span class="Movie-Type">Movie</span>
-                        <span class="Movie-Genre">Action</span>
-                        <span class="Movie-Date">2023</span>
-                        <span class="Movie-Comp">HBO</span>
-                        <span class="Movie-Rate">8.4</span>
-                        <span class="Movie-Dur">190min</span>
-                    </div>
-                    </div>
-                </div>
+                <div class="CarouselSlider-inner"></div>
                 <div class="CarouselSlider-btns">
                     <button type="button" class="prev"><</button>
                     <button type="button" class="next">></button>
@@ -383,21 +231,7 @@
                 <div class="section-header">
                     <h2 class="CarouselSlderTitle" data-list-id="80">Horror :</h2>
                 </div>
-                <div class="CarouselSlider-inner">
-                    <div class="CarouselCard">
-                    <img title="img" src="./image/img1.jpg" alt="" class="MoviePoster">
-                    <img title="img" src="./image/img2.jpg" alt="" class="MovieCover">
-                    <h4 class="MovieTitle">Spider men into the spider verse</h4>
-                    <div class="MovieNum">
-                        <span class="Movie-Type">Movie</span>
-                        <span class="Movie-Genre">Action</span>
-                        <span class="Movie-Date">2023</span>
-                        <span class="Movie-Comp">HBO</span>
-                        <span class="Movie-Rate">8.4</span>
-                        <span class="Movie-Dur">190min</span>
-                    </div>
-                    </div>
-                </div>
+                <div class="CarouselSlider-inner"></div>
                 <div class="CarouselSlider-btns">
                     <button type="button" class="prev"><</button>
                     <button type="button" class="next">></button>
@@ -409,21 +243,7 @@
                 <div class="section-header">
                     <h2 class="CarouselSlderTitle" data-list-id="80">Music :</h2>
                 </div>
-                <div class="CarouselSlider-inner">
-                    <div class="CarouselCard">
-                    <img title="img" src="./image/img1.jpg" alt="" class="MoviePoster">
-                    <img title="img" src="./image/img2.jpg" alt="" class="MovieCover">
-                    <h4 class="MovieTitle">Spider men into the spider verse</h4>
-                    <div class="MovieNum">
-                        <span class="Movie-Type">Movie</span>
-                        <span class="Movie-Genre">Action</span>
-                        <span class="Movie-Date">2023</span>
-                        <span class="Movie-Comp">HBO</span>
-                        <span class="Movie-Rate">8.4</span>
-                        <span class="Movie-Dur">190min</span>
-                    </div>
-                    </div>
-                </div>
+                <div class="CarouselSlider-inner"></div>
                 <div class="CarouselSlider-btns">
                     <button type="button" class="prev"><</button>
                     <button type="button" class="next">></button>
@@ -435,21 +255,7 @@
                 <div class="section-header">
                     <h2 class="CarouselSlderTitle" data-list-id="80">Mystery :</h2>
                 </div>
-                <div class="CarouselSlider-inner">
-                    <div class="CarouselCard">
-                    <img title="img" src="./image/img1.jpg" alt="" class="MoviePoster">
-                    <img title="img" src="./image/img2.jpg" alt="" class="MovieCover">
-                    <h4 class="MovieTitle">Spider men into the spider verse</h4>
-                    <div class="MovieNum">
-                        <span class="Movie-Type">Movie</span>
-                        <span class="Movie-Genre">Action</span>
-                        <span class="Movie-Date">2023</span>
-                        <span class="Movie-Comp">HBO</span>
-                        <span class="Movie-Rate">8.4</span>
-                        <span class="Movie-Dur">190min</span>
-                    </div>
-                    </div>
-                </div>
+                <div class="CarouselSlider-inner"></div>
                 <div class="CarouselSlider-btns">
                     <button type="button" class="prev"><</button>
                     <button type="button" class="next">></button>
@@ -461,21 +267,7 @@
                 <div class="section-header">
                     <h2 class="CarouselSlderTitle" data-list-id="80">Romance :</h2>
                 </div>
-                <div class="CarouselSlider-inner">
-                    <div class="CarouselCard">
-                    <img title="img" src="./image/img1.jpg" alt="" class="MoviePoster">
-                    <img title="img" src="./image/img2.jpg" alt="" class="MovieCover">
-                    <h4 class="MovieTitle">Spider men into the spider verse</h4>
-                    <div class="MovieNum">
-                        <span class="Movie-Type">Movie</span>
-                        <span class="Movie-Genre">Action</span>
-                        <span class="Movie-Date">2023</span>
-                        <span class="Movie-Comp">HBO</span>
-                        <span class="Movie-Rate">8.4</span>
-                        <span class="Movie-Dur">190min</span>
-                    </div>
-                    </div>
-                </div>
+                <div class="CarouselSlider-inner"></div>
                 <div class="CarouselSlider-btns">
                     <button type="button" class="prev"><</button>
                     <button type="button" class="next">></button>
@@ -487,21 +279,7 @@
                 <div class="section-header">
                     <h2 class="CarouselSlderTitle" data-list-id="80">Thriller :</h2>
                 </div>
-                <div class="CarouselSlider-inner">
-                    <div class="CarouselCard">
-                    <img title="img" src="./image/img1.jpg" alt="" class="MoviePoster">
-                    <img title="img" src="./image/img2.jpg" alt="" class="MovieCover">
-                    <h4 class="MovieTitle">Spider men into the spider verse</h4>
-                    <div class="MovieNum">
-                        <span class="Movie-Type">Movie</span>
-                        <span class="Movie-Genre">Action</span>
-                        <span class="Movie-Date">2023</span>
-                        <span class="Movie-Comp">HBO</span>
-                        <span class="Movie-Rate">8.4</span>
-                        <span class="Movie-Dur">190min</span>
-                    </div>
-                    </div>
-                </div>
+                <div class="CarouselSlider-inner"></div>
                 <div class="CarouselSlider-btns">
                     <button type="button" class="prev"><</button>
                     <button type="button" class="next">></button>
@@ -513,21 +291,7 @@
                 <div class="section-header">
                     <h2 class="CarouselSlderTitle" data-list-id="80">War :</h2>
                 </div>
-                <div class="CarouselSlider-inner">
-                    <div class="CarouselCard">
-                    <img title="img" src="./image/img1.jpg" alt="" class="MoviePoster">
-                    <img title="img" src="./image/img2.jpg" alt="" class="MovieCover">
-                    <h4 class="MovieTitle">Spider men into the spider verse</h4>
-                    <div class="MovieNum">
-                        <span class="Movie-Type">Movie</span>
-                        <span class="Movie-Genre">Action</span>
-                        <span class="Movie-Date">2023</span>
-                        <span class="Movie-Comp">HBO</span>
-                        <span class="Movie-Rate">8.4</span>
-                        <span class="Movie-Dur">190min</span>
-                    </div>
-                    </div>
-                </div>
+                <div class="CarouselSlider-inner"></div>
                 <div class="CarouselSlider-btns">
                     <button type="button" class="prev"><</button>
                     <button type="button" class="next">></button>
@@ -535,37 +299,22 @@
             </div>
            </section>
            <section id="western">
-            <div class="CarouselSlider">
-                <div class="section-header">
-                    <h2 class="CarouselSlderTitle" data-list-id="80">Western :</h2>
-                </div>
-                <div class="CarouselSlider-inner">
-                    <div class="CarouselCard">
-                    <img title="img" src="./image/img1.jpg" alt="" class="MoviePoster">
-                    <img title="img" src="./image/img2.jpg" alt="" class="MovieCover">
-                    <h4 class="MovieTitle">Spider men into the spider verse</h4>
-                    <div class="MovieNum">
-                        <span class="Movie-Type">Movie</span>
-                        <span class="Movie-Genre">Action</span>
-                        <span class="Movie-Date">2023</span>
-                        <span class="Movie-Comp">HBO</span>
-                        <span class="Movie-Rate">8.4</span>
-                        <span class="Movie-Dur">190min</span>
+                <div class="CarouselSlider">
+                    <div class="section-header">
+                        <h2 class="CarouselSlderTitle" data-list-id="80">Western :</h2>
                     </div>
+                    <div class="CarouselSlider-inner"></div>
+                    <div class="CarouselSlider-btns">
+                        <button type="button" class="prev"><</button>
+                        <button type="button" class="next">></button>
                     </div>
                 </div>
-                <div class="CarouselSlider-btns">
-                    <button type="button" class="prev"><</button>
-                    <button type="button" class="next">></button>
-                </div>
-            </div>
            </section>
        </div>
       </main>
       <div class="Vertecal-btn">
          <button title="scrool to the top button" class="Y-scroll-btn" onclick="ToTop()"><i class="fa-solid fa-chevron-right"></i></button>
       </div>
-      <!-- <a href="#" title="to top" class="Y-scroll-btn"><i class="fa-solid fa-chevron-right"></i></a> -->
       <footer>
          <div class="footer-inner">
             <div class="footer-Col">
@@ -577,7 +326,6 @@
                         All the Rights are seaved from Movies_4U 2024.
                     </p>
                 </p>
-
             </div>
             <div class="footer-Col">
                 <h4>Usefull Links :</h4>
@@ -589,20 +337,20 @@
                         <li><a href="#Popular">Most Watched</a></li>
                     </ul>
                     <ul>
-                        <li><a href="./contact.html">Contact us</a></li>
+                        <li><a href="#">Contact us</a></li>
                         <li><a href="#">Terms of Service</a></li>
                     </ul>
                     <div class="footer-links">
-                        <a href="">
-                          <i class="fa-solid fa-user"></i>
+                        <a href="https://www.youtube.com/channel/UCuZLJuB324n8-7FvBG6tFdQ" title="footer-link">
+                           <i class="fa-brands fa-youtube"></i>
                         </a>
-                        <a href="">
+                        <a href="https://web.facebook.com/profile.php?id=100086765432919" title="footer-link">
                           <i class="fa-brands fa-linkedin"></i>
                         </a>
-                        <a href="">
+                        <a href="https://web.facebook.com/profile.php?id=100086765432919" title="footer-link">
                           <i class="fa-brands fa-facebook"></i>
                         </a>
-                  </div>
+                    </div>
                 </div>
             </div>
          </div>
@@ -610,11 +358,11 @@
 
 
 
-
-    <script src="./Scripts/script.js"  type="application/javascript"></script>
-    <script src="./Scripts/api.js"  type="application/javascript"></script>
-
-    <script src="./Scripts/app.js"  type="application/javascript"></script>
-    <script src="./Scripts/app_api.js"  type="application/javascript"></script>
+    <script src="/Scripts/script.js"  type="application/javascript"></script>
+    <script src="/Scripts/api.js"  type="application/javascript"></script>
+    <script src="./Scripts/index.js"></script>
+    <!-- the scripts to the Carosel Js Files -->
+    <script src="/Scripts/app.js"  type="application/javascript"></script>
+    <script src="/Scripts/app_api.js"  type="application/javascript"></script>
    </body>
 </html>
