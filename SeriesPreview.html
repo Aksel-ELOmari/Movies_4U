@@ -1,13 +1,19 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"  type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./Styles/index.css">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4118984890753236"
-     crossorigin="anonymous"></script>
+        <meta charset="UTF-8">
+        <!-- Google adsense meta tag -->
+        <meta name="google-adsense-account" content="ca-pub-4118984890753236">
+        <!-- firebase authuarization -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/10.11.1/firebase-app.js" integrity="sha512-dBA6c61q2PXSh1zJW9w235DM8aV7V0LU3PEZ5olnwzgiKdEuuxQaPFMiD/QDbKjmBBPR23+jiPV+tLMhWrG1rA==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+        <meta name="keyword" content="watch movies, movies online, watch TV, TV online, TV shows online, watch TV shows, stream movies, stream tv, instant streaming, watch online, movies, watch movies Morocco, watch TV online, no download, full length movies">
+        <meta name="description" content="Watch Netflix movies & TV shows online or stream right to your smart TV, game console, PC, Mac, mobile, tablet and more.
+        Movies is universal search & discovery for any TV Show & Movie across Netflix, Hulu, Amazon, and hundreds of other providers in one place.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- font-awesome cli  -->
+        <link rel="stylesheet"  type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet"  type="text/css" href="./Styles/index.css">
+        <link rel="stylesheet"  type="text/css" href="./Styles/style.css">
     <title>Movies_4U</title>
 </head>
    <body>
@@ -26,9 +32,16 @@
                     <li class="nav-link-item nav-Sing-btn active"><a href="#">Sing up</a></li>
                 </ul>
             </div>
-            <a href="./Search.html" title="link" class="btnsearch">
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </a>
+            <div class="flex gap-8">
+                <a href="./Search.html" title="link" class="btnsearch">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+                <!-- the user cover img -->
+                <a href="./Dashboard.html" title="to the dashboard" class="navUser-img">
+                    <img src="./SRC/image/bgCover_Report.jpg" class="User_img" alt="">
+                </a>
+                <!-- the user cover img -->
+            </div>
          </nav>
          <div class="MoviesContainer"></div>
          <div class="header--before"></div>
@@ -49,10 +62,6 @@
                    </div>
                 </div>
              </div>
-             <div class="CarouselSlider-btns">
-                   <button type="button" id="prev"><</button>
-                   <button type="button" id="next">></button>
-             </div>
         </section>
 
         <section id="SeriesData-2 py-10" class="MoreDetails container">
@@ -60,7 +69,7 @@
                 <h2>Created by :</h2>
                 <div class="countainer--inner">
                     <div class="text-center">
-                        <img src=""class="CreaterCover" alt="." style="z-index: 2;">
+                        <img src=""class="CreaterCover" alt=".">
                         <h5 class="CreaterName"></h5>
                     </div>
                 </div>
@@ -70,45 +79,22 @@
          <section id="relatedContent" class="CarouselSlider">
              <h2 class="CarouselSlderTitle">Related Content :</h2>
               <div class="CarouselSlider-inner">
-                 <div class="CarouselCard">
-                    <img src="../image/img1.jpg" alt="" class="MoviePoster">
-                    <img src="../image/img2.jpg" alt="" class="MovieCover">
-                    <h4 class="MovieTitle">Spider men into the spider verse</h4>
-                    <div class="MovieNum">
-                        <span class="Movie-Type">Movie</span>
-                        <span class="Movie-Genre">Action</span>
-                        <span class="Movie-Date">2023</span>
-                        <span class="Movie-Comp">HBO</span>
-                        <span class="Movie-Rate">8.4</span>
-                        <span class="Movie-Dur">190min</span>
-                    </div>
-                 </div>
-              </div>
+                 <div class="CarouselCard"></div>
               <div class="CarouselSlider-btns">
                     <button type="button" id="prev"><</button>
                     <button type="button" id="next">></button>
               </div>
          </section>
       </header>
-        <div class="Pages-pagination">
+        <div class="Pages-pagination " style="width: 90%;margin:.5rem auto;display:flex;align-items:center;gap:gap-6rem;">
             <span type="button" class="btn-pg btn-pg-Prev">-</span>
             <span type="button" id="main-page" class="main-page">0 </span>
             <span type="button" id="anime__pageCrease" class="btn-pg btn-pg-Next">+</span>
         </div>
         <div id="overfly">
-            <div class="hide-overly-btn flex-center" onclick="closeNav()" style="height:30px;width:30px; border-radius:50%; background:yellow;color:orangered;float:right;margin:.5rem;"><i class="fa-solid fa-x"></i></div>
-            <div class="Videos-inner">
-                <!-- <div class="Video-item">
-                   <h1 class="video-title">...</h1>
-                     <iframe width="779" height="438" src="https://www.youtube.com/embed/JmF0LmnkkO4"
-                 title="The perfect casting doesn&#39;t exi--" frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                   referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div> -->
-            </div>
+            <div class="hide-overly-btn small_btn" onclick="closeNav()">X</div>
+            <div class="Videos-inner"></div>
         </div>
-        
-
       <footer>
          <div class="footer-inner">
             <div class="footer-Col">
@@ -129,6 +115,7 @@
                         <li><a href="./index.html">Movies</a></li>
                         <li><a href="./anime.html">Anime/Animation</a></li>
                         <li><a href="./Series.html">TV-Shows</a></li>
+                        <li><a href="">Most Watched</a></li>
                     </ul>
                     <ul>
                         <li><a href="./contact.html">Contact us</a></li>
