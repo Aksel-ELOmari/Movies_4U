@@ -190,12 +190,12 @@ function fetchVideos(api){
     .then(res => {
             let Videos = res.videos.results;
             console.log("Videos :");
-            console.log(Videos);
             let OverlyCarousel = document.querySelector('.Videos-inner');
             if(res)
             {
                 Videos.forEach(Video =>
                     {
+                        if(Video.site != "YouTube")
                         let {name,key,site} = Video;
                         let Video_item = document.createElement('div');
                         Video_item.classList.add('Video-item');
