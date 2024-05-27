@@ -63,7 +63,7 @@ function getSeries(api,plac,PG,GR)
                         // console.log(Serie);
                         let {id,name,backdrop_path,poster_path,first_air_date,vote_average} = Serie;
                         let SerieCard = document.createElement('a');
-                        SerieCard.href = `../SeriesPreview.html?id=${id}&page=${PG}&URL=${api}&GR=${GR}&Type=Serie`;
+                        SerieCard.href = `./SeriesPreview.html?id=${id}&page=${PG}&URL=${api}&GR=${GR}&Type=Serie`;
                         SerieCard.classList.add('CarouselCard');
                         SerieCard.innerHTML = 
                         `
