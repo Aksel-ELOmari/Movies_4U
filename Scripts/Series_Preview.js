@@ -136,7 +136,7 @@ function similar(place)
                     results.forEach(Movie => {
                         // console.log(Movie);
                         let MovieCard = document.createElement('a');
-                        MovieCard.href = `../SeriesPreview.html?id=${Movie.id}&title=${Movie.title}&URL=tv/${Movie_id}/similar?language=en-US&page=${page}&Type=Movie`;
+                        MovieCard.href = `./SeriesPreview.html?id=${Movie.id}&title=${Movie.title}&URL=tv/${Movie_id}/similar?language=en-US&page=${page}&Type=Movie`;
                         MovieCard.classList.add('CarouselCard');
                         MovieCard.setAttribute('id',`${Movie.id}`);
                         MovieCard.innerHTML  = 
@@ -174,7 +174,7 @@ function GetSeasons(place)
     series.forEach(S => {
         let {poster_path,backdrop_path,season_number,vote_average,name,episode_count,air_date,id}  = S;
         let SeasonCard = document.createElement('a');
-        // SeasonCard.href = `../SeriesPreview.html?id=${id}&title=${name}&URL=tv/${Movie_id}?language=en-US&page=${page}&Type=Season`;
+        // SeasonCard.href = `./SeriesPreview.html?id=${id}&title=${name}&URL=tv/${Movie_id}?language=en-US&page=${page}&Type=Season`;
         SeasonCard.target = `_blanket`;
         SeasonCard.classList.add('CarouselCard');
         SeasonCard.setAttribute('id',`${id}`);
