@@ -195,7 +195,7 @@ function fetchVideos(api){
             {
                 Videos.forEach(Video =>
                     {
-                        if(Video.site != "YouTube")
+                
                         let {name,key,site} = Video;
                         let Video_item = document.createElement('div');
                         Video_item.classList.add('Video-item');
@@ -208,9 +208,9 @@ function fetchVideos(api){
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             `;
-                        }else if(site == "Yahoo")
+                        }else if(site !== "Yahoo")
                         {
-
+                            console.log(Video)
                         }
                        OverlyCarousel.append(Video_item);
                     })
