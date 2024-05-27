@@ -113,9 +113,9 @@ function FetchTags(genres)
 }
 
 let PlaceMoviePreview = document.querySelector('.MoviesContainer');
-let bellowsimilar = document.querySelector('#relatedContent .CarouselSlider-inner');
+
     
-function similar(place)
+function similar(page="1")
     {
         const Movie_API = base_Url+`movie/${Movie_id}/similar?language=en-US&page=${page}&api_key=${api_key}`;
               fetch(`${base_Url}movie/${Movie_id}/similar?language=en-US&page=${page}&api_key=${api_key}`)
@@ -142,12 +142,12 @@ function similar(place)
                                     <span class="Movie-Dur"></span>
                                 </div>
                         `
-                        place.append(MovieCard);
+                        document.querySelector('#relatedContent .CarouselSlider-inner').append(MovieCard);
                     });
                 })
 
 }
-similar(bellowsimilar);
+similar();
 
 let MorerelatedContent = document.querySelector('.MorerelatedContent .CarouselSlider-inner');
 let btnPGPrev = document.querySelector('.btn-pg-Prev');
@@ -157,11 +157,12 @@ btnPGCurr.innerHTML = page;
 let Allpaginations = document.querySelectorAll('.btn-pg');
 Allpaginations.forEach(pagi =>{
         pagi.addEventListener('click',()=>{
-            btnPGCurr.innerHTML = pagi.innerHTML;
-            similar(bellowsimilar);
+            const pagiNum = pagi.innerHTML
+            btnPGCurr.innerHTML = pagiNum;
+            similar(pagiNum);
         })
     })
-PageTogller(btnPGNext,btnPGCurr,btnPGPrev,similar,bellowsimilar)
+PageTogller(btnPGNext,btnPGCurr,btnPGPrev,similar,page)
 function PageTogller(R,C,L,F,Pram){
    C.innerHTML = page;
    R.onclick = () =>
@@ -188,6 +189,8 @@ function fetchVideos(api){
     fetch(api).then(response => response.json())
     .then(res => {
             let Videos = res.videos.results;
+            console.log("Videos :");
+            console.log(Videos);
             let OverlyCarousel = document.querySelector('.Videos-inner');
             if(res)
             {
