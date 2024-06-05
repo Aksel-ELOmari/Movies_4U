@@ -29,3 +29,10 @@ function trackVisits() {
     console.log("Total visits: " + localStorage.visits);
 }
 trackVisits();
+
+let navlinks = document.querySelectorAll('.nav-links ul');
+navLinks.forEach(navLink = () =>{
+    let li = document.creatElemt("li")
+    li:classList.add("nav-item")
+    li.innerHtml = ""
+});
