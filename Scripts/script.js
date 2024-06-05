@@ -22,3 +22,10 @@ navBar_btn.addEventListener('click',()=>{
 const index_img = localStorage.getItem('UserProfile');
 let user_img = document.querySelectorAll('.User_img');
 user_img.forEach(img => img.src = index_img);
+
+//the users tracker
+function trackVisits() {
+    localStorage.visits = parseInt(localStorage.visits || 0) + 1;
+    console.log("Total visits: " + localStorage.visits);
+}
+trackVisits();
