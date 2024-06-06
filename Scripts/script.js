@@ -30,9 +30,22 @@ function trackVisits() {
 }
 trackVisits();
 
-let navlinks = document.querySelectorAll('.nav-links ul');
-navLinks.forEach(navLink = () =>{
-    let li = document.creatElemt("li")
-    li:classList.add("nav-item")
-    li.innerHtml = ""
+let navLinks = document.querySelectorAll('.nav-links ul');
+navLinks.forEach(navLink => {
+    let visitorCount = localStorage.getItem('visitorCount');
+    if (visitorCount === null) {
+        visitorCount = 0;
+    } else {
+        visitorCount = parseInt(visitorCount);
+    }
+    visitorCount++;
+    localStorage.setItem('visitorCount', visitorCount);
+    
+    let visitors = document.createElement("div");
+    visitors.innerHTML = `
+        <i class="fa-solid fa-eye"></i>
+        <p class="usersCounter">${visitorCount}</p>
+        `;
+    navLink.appendChild(visitors);
 });
+
