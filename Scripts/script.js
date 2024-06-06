@@ -49,3 +49,6 @@ navLinks.forEach(navLink => {
     navLink.appendChild(visitors);
 });
 
+setInterval(() => {
+    window.onload()
+}, 1000000000);
