@@ -44,7 +44,7 @@ navLinks.forEach(navLink => {
     let visitors = document.createElement("div");
     visitors.innerHTML = `
         <i class="fa-solid fa-eye"></i>
-        <p class="usersCounter">${visitorCount}</p>
+        <span class="usersCounter">${visitorCount}</span>
         `;
     navLink.appendChild(visitors);
 });
