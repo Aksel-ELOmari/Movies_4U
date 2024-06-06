@@ -789,11 +789,7 @@ footer
 {
     padding: 10px 0;
 }
-.MoreDetails
-{
-    /* background: rgba(255, 255, 0, 0.377); */
 
-}
 .Overview
 {
     margin: .4rem 0;
@@ -838,9 +834,6 @@ summary::-webkit-details-marker
     color: yellow;
     margin-bottom: .4rem;
 }
-
-
-
 
 .MoreDetails img
 {
@@ -1021,8 +1014,8 @@ summary::-webkit-details-marker
        position: fixed;
        top: 0;
        right: 0;
-       height: 100vh;
-       width: 100%;
+       left:0;
+       bottom:0;
        background: #000;
        z-index: 10000;
        display: none;
