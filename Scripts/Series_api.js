@@ -223,7 +223,14 @@ function CreasePage(R,C,L,api,plac)
 
 
 
-
+let navLinks = document.querySelector('.nav-links ul');
+let visitors = document.createElement("div");
+localStorage.getItem('visitorCount');
+visitors.innerHTML = `
+    <i class="fa-solid fa-eye"></i>
+    <span class="usersCounter">${visitorCount}</span>
+    `;
+navLink.appendChild(visitors);
 
 
 
