@@ -21,11 +21,8 @@ html,*
     --blur-class:blur(20px);
 }
 .onfire{color:orangered}
-.fa,.fa-solid,.fa-brands{color: orange;cursor: pointer;margin: 0  .7rem;font-size: 1.1rem;}
-.fa,.fa-solid,.fa-brands:hover{color: orangered;}
-.fa-youtube{color: red;}
-.fa-facebook{color: blue;}
-.fa-linkedin{color: rgb(12, 72, 92);}
+.fa,.fa-solid{color: orange;cursor: pointer;margin: 0  .7rem;}
+.fa,.fa-solid:hover{color: orangered;}
 .active a
 {
     background: orangered !important;
@@ -34,8 +31,6 @@ html,*
     box-shadow: inset 2px 2px 12px  #000 !important;
     border-radius: 20px !important;
 }
-input:focus{background: #9c8106!important;color:black!important;font-weight: bold!important;}
-.disabeled{opacity: .1;-webkit-user-select: none;user-select: none;cursor: none;}
 .show{display: block;}
 .hide{display: none;}
 .flex,
@@ -290,7 +285,7 @@ header nav ul .ul--before{display: none;}
 
 iframe{translate: 0 -30px;}
 
-/* Start styling the countainer that holdes the movie's cards */
+/* Start styling the countainer that hodes the movie's cards */
 .MoviesContainer
 {
     display: flex;
@@ -394,22 +389,6 @@ iframe{translate: 0 -30px;}
 
 
 /* ? Start styling the Carousel slider  */
-/* .dots
-{
-    position: absolute;
-    top: .2rem;
-    right: .2rem;
-    color: red;
-}
-.heart{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-    font-size: 30px;
-}
-.heart:hover{color: red !important;}
-.CarouselSlider:hover+.heart{display: block;} */
 
 .CarouselSlider
 {
@@ -472,29 +451,16 @@ section .CarouselSlider-inner::-webkit-scrollbar
 section .CarouselSlider-inner::-webkit-scrollbar-thumb{height: 4px;background: var(--favourite-color);border-radius: 20px;}
 .CarouselSlider-inner .CarouselCard
 {
-    min-width:10.625rem;
-    height:16.25rem;
+    width: 160px;
+    height: 260px;
+    flex-shrink: 0;
     position: relative;
     cursor: pointer;
 }
 .CarouselSlider-inner .CarouselCard:hover
 {
-    min-width: 30%;
+    width: 30%;
     transition: all .6s;
-}
-@media (max-width:720px){
-    .CarouselSlider-inner .CarouselCard
-    {
-        width:10.625rem;
-        height:16.25rem;
-        position: relative;
-        cursor: pointer;
-    }
-    .CarouselSlider-inner .CarouselCard:hover
-    {
-        width: 30%;
-        transition: all .6s;
-    }
 }
 .countainer-inner .CarouselCard .Movie-Type,
 .countainer-inner .CarouselCard .Movie-Genre,
@@ -577,10 +543,8 @@ section .CarouselSlider-inner::-webkit-scrollbar-thumb{height: 4px;background: v
 }
 .countainer-inner .CarouselCard
 {
-    /* width: 170px; */
-    /* height: 260px; */
-    width:10.625rem;
-    height:16.25rem;
+    width: 170px;
+    height: 260px;
     flex-shrink: 0;
     position: relative;
     cursor: pointer;
@@ -647,7 +611,7 @@ section .CarouselSlider
 /* Start styking the footer section */
 footer
 {
-   padding:0 4rem;
+   padding: 4rem;
 }
 .footer-inner,.footer-links
 {
@@ -666,7 +630,7 @@ footer
 }
 .footerSitedes
 {
-    width: 40rem;
+    width: 400px;
     max-width: 100%;
 }
 
@@ -719,13 +683,17 @@ footer
 }
 #main-page
 {
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
     border-radius: 50%;
     background: var(--favourite-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+    box-shadow: 2px 2px 12px -3px #fff !important;
     box-shadow: inset 2px 2px 12px  #000 !important;
 }
-
 /* ! <= styling the pagination btns */
 .SearchMovieCard{z-index:10;}
 /* styling the overly  */
@@ -886,6 +854,7 @@ summary::-webkit-details-marker
     max-width: 100%;
     margin:30px auto;
 }
+
 .createrSection h2
 {
     margin-bottom: 20px;
@@ -953,6 +922,17 @@ summary::-webkit-details-marker
     .countainer-inner
     {
         text-align: center;
+        /* text-align:left; */
+    }
+    .footer-inner
+    {
+        flex-direction:column;
+    }
+    .footer-Col h1,.footer-Col h4
+    {
+        width: 100%;
+        text-align: center;
+        /* background: red; */
     }
     #Projecter .main-preview
     {
@@ -992,16 +972,10 @@ summary::-webkit-details-marker
     }
 }
 
-@media screen and (max-width: 775px)
-{
-    .thumbnail .item{opacity: 0;}
-    .thumbnail .item .content .title{opacity: 1;}
-} 
-
 
 
 .navbar,.hidenavBar_btn{display: none;}
-@media screen and (max-width: 775px) 
+@media screen and (max-width: 678px) 
 {
     .CarouselSlider-inner .CarouselCard:hover .Movie-Type,
     .CarouselSlider-inner .CarouselCard:hover .Movie-Genre,
@@ -1018,11 +992,12 @@ summary::-webkit-details-marker
         height: 30px;
         width: 30px;
         font-size: 20px;
+        display: block;
         display: flex;
         align-items: center;
         justify-content: center;
         border-radius:50%;
-        z-index: 5;
+        z-index: 10000;
     }
     .hidenavBar_btn
     {
@@ -1057,56 +1032,15 @@ summary::-webkit-details-marker
       }
 }
 
-
-
-@media (max-width: 320px) {.CarouselCard{border: solid .6 #fff;}}
-@media (max-width: 960px) 
+.hide-overly-btn
 {
-    footer{padding: 0;margin: 0;}
-    .footerSitedes
-    {
-        object-fit: cover;
-    }
-    .footer-inner,.footer-links
-    {
-        display:block;
-        text-align: center;
-        text-wrap: wrap;
-        word-wrap: break-word;
-    }
-    .footerSitedes{width:100%;padding: 0;}
+    height: 30px;
+    width: 30px;
+    margin: .8rem;
+    border-radius: 50%;
+    background: rgb(102, 102, 36);
+    color: #000;
+    transition:.3s;
+    font-weight: bolder;
 }
-
-/* Xiaomi Redmi 9A */
-@media screen and (max-width: 720px)
-{
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    ul,
-    ol,
-    ul li,
-    ol li,
-    p,
-    label,
-    span,
-    .MoviePreviewPoster,
-    iframe,
-    button
-    /* body main */
-    {scale: .7!important;flex-wrap:wrap;padding: 0;}
-     .UL__genres{width: 99%;padding: 0;gap: 0;}
-    .MoviesRates span{font-size: 14px;}
-    section{padding: 0;margin: .2rem 0;}
-    .Vertecal-btn{right: 1rem;}
-    .CarouselSlider-inner .CarouselCard,
-    .countainer-inner .CarouselCard{height:8.25rem;width:5.625rem;}
-    .CarouselSlider-inner .CarouselCard:hover,
-    .countainer-inner .CarouselCard:hover{height:8.25rem;width:5.625rem;}
-} 
-
-.Pages-pagination{display: flex;align-items: center;margin-left: 50%;}
-
+.hide-overly-btn:hover{background: orange;}
