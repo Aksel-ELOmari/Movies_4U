@@ -47,3 +47,4 @@ function showSlider(type){
         next.click();
     }, timeAutoNext)
 }
+

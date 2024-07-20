@@ -107,7 +107,7 @@ function getMovies(page,media,GR='')
         .then(response => response.json())
         .then(res => 
             {if(res.results.length > 0){
-                    // plac.innerHTML = '';
+                    plac.innerHTML = '';
                     const Movies = res.results;
                     Movies.forEach(Movie => {
                         // console.log(Movie);
