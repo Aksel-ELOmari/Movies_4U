@@ -1049,7 +1049,9 @@ summary::-webkit-details-marker
 
 
 @media (max-width:370px){
-    .CarouselSlider-inner .CarouselCard{
+    .CarouselSlider-inner .CarouselCard,
+    .Card,.card,.MovieCard,.movie-card
+    {
         max-height:9rem !important;
         max-width:6rem !important;
     }
