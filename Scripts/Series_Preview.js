@@ -203,7 +203,7 @@ function fetchVideos() {
         .then(res => {
             let Videos = res.videos.results;
             let OverlyCarousel = document.querySelector('.Videos-inner');
-            if (!=Videos) {closeNav();}
+            if (!Videos) {closeNav();}
             else {
                 Videos.forEach(Video => {
                     let { name, key, site } = Video;
