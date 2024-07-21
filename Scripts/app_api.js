@@ -24,7 +24,7 @@ function CarouselCards(carouselSelector, media, PG) {
                 const thumbnailItem = document.createElement('div');
                 thumbnailItem.classList.add('item');
                 thumbnailItem.innerHTML = `
-                    <a href="./preview.html?id=${movie.id}&page=${PG}&URL=discover/${media}?language=en-US&Type=movie" target="_blank" data-id="${id}">
+                    <a href="./preview.html?id=${movie.id}&page=${PG}&URL=discover/${media}?language=en-US&Type=movie" target="_blank" data-id="${movie.id}">
                         <img title="img" src="https://image.tmdb.org/t/p/original/${posterPath}">
                     </a>
                     <div class="content">
