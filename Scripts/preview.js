@@ -181,7 +181,7 @@ function fetchVideos(api) {
         .then(res => {
             let Videos = res.videos.results;
             let OverlyCarousel = document.querySelector('.Videos-inner');
-            if (!=res) {
+            if (!res) {
                 document.getElementById('overfly').style.display = "none";
             } else {
                 Videos.forEach(Video => {
