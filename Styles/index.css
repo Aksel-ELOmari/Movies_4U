@@ -1046,3 +1046,11 @@ summary::-webkit-details-marker
     font-weight: bolder;
 }
 .hide-overly-btn:hover{background: orange;}
+
+
+@media (max-width:370px){
+    .CarouselSlider-inner .CarouselCard{
+        max-height:9rem !important;
+        max-width:6rem !important;
+    }
+}
