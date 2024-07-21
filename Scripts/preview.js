@@ -119,7 +119,7 @@ function similar(place) {
             let results = res.results;
             results.forEach(Movie => {
                 let MovieCard = document.createElement('a');
-                MovieCard.href = `../preview.html?id=${Movie.id}&title=${Movie.title}&URL=movie/${Movie_id}/similar?language=en-US&page=${page}&Type=Movie`;
+                MovieCard.href = `./preview.html?id=${Movie.id}&title=${Movie.title}&URL=movie/${Movie_id}/similar?language=en-US&page=${page}&Type=Movie`;
                 MovieCard.classList.add('CarouselCard');
                 MovieCard.setAttribute('id', `${Movie.id}`);
                 MovieCard.setAttribute('data-id', `${Movie.id}`);
@@ -152,6 +152,7 @@ let Allpaginations = document.querySelectorAll('.btn-pg');
 Allpaginations.forEach(pagi => {
     pagi.addEventListener('click', () => {
         btnPGCurr.innerHTML = pagi.innerHTML;
+        page =  pagi.innerHTML;
         similar(bellowsimilar);
     });
 });
@@ -180,7 +181,9 @@ function fetchVideos(api) {
         .then(res => {
             let Videos = res.videos.results;
             let OverlyCarousel = document.querySelector('.Videos-inner');
-            if (res) {
+            if (!=res) {
+                document.getElementById('overfly').style.display = "none";
+            } else {
                 Videos.forEach(Video => {
                     let { name, key, site } = Video;
                     let Video_item = document.createElement('div');
@@ -199,9 +202,6 @@ function fetchVideos(api) {
                     }
                     OverlyCarousel.append(Video_item);
                 });
-            } else {
-                alert('There are no videos for this movie, sorry!');
-                document.getElementById('overfly').style.display = "none";
             }
         });
 }

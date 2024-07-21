@@ -39,11 +39,13 @@ html,*
 .flec-column,
 .flec-center,
 .flec-around,
-.flec-between
+.flec-between,
+.flex-wrap
 {
     display: flex;
     align-items: center;
 }
+.flex-wrap{flex-wrap: wrap;}
 .flec-start
 {
   align-items: flex-start;

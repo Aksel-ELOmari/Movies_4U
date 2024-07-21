@@ -58,14 +58,6 @@ function PCard(api) {
                                 <span id="MoviesP-Comp">Netifix</span>
                             </div>
                             <div class="MoviePreviewTags"></div>
-                            <div class="MovieData-2 py-10" style="line-height: 24px;font-style: italic;">
-                                <p class="episode_run_time">Episode run time :</p>
-                                <p> Streaming right now on : </p>
-                                <p>in_production : </p>
-                                <ol class="production_countries">
-                                    <li class="ProdCount"></li>
-                                </ol>
-                            </div>
                             <div class="MoviesPreviewStory">
                                 <p id="MP-Preview">${overview}</p>
                             </div>
@@ -211,7 +203,8 @@ function fetchVideos() {
         .then(res => {
             let Videos = res.videos.results;
             let OverlyCarousel = document.querySelector('.Videos-inner');
-            if (Videos) {
+            if (!=Videos) {closeNav();}
+            else {
                 Videos.forEach(Video => {
                     let { name, key, site } = Video;
                     let Video_item = document.createElement('div');
@@ -228,8 +221,6 @@ function fetchVideos() {
                     }
                     OverlyCarousel.append(Video_item);
                 })
-            } else {
-                closeNav();
             }
         })
 }
