@@ -6,7 +6,7 @@ const Url_params = new URLSearchParams(Movie_data);
 const base_Url = 'https://api.themoviedb.org/3/';
 const POP_URL = 'movie/popular?language=en-US';
 const Movie_id = Url_params.get('id');
-let page = Url_params.get('page');
+let page = Url_params.get('page')?Url_params.get('page'):1;
 const this_url = Url_params.get('URL');
 const GR = Url_params.get('GR');
 const TYPE = Url_params.get('Type');
