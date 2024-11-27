@@ -48,7 +48,8 @@ const loginUser = async function () {
   const password = document.getElementById("user_password").value
   const LoginBtn = document.getElementById("login-btn");
   email&&password&&LoginBtn
-    ? (LoginBtn.onclick = async function () {
+    ? (LoginBtn.onclick = async function (e) {
+      e.preventDefault();
         try {
           // Log in the user with Firebase Authentication
           const userCredential = await signInWithEmailAndPassword(
@@ -72,7 +73,8 @@ const registerUser = async function () {
   const name = document.getElementById("new_name").value
   const SingUpBtn = document.getElementById("Sing-btn");
   SingUpBtn&&password&&name&&email
-    ? (SingUpBtn.onclic = async function () {
+    ? (SingUpBtn.onclic = async function (e) {
+      e.preventDefault();
         try {
           // Register the user with Firebase Authentication
           const userCredential = await createUserWithEmailAndPassword(
