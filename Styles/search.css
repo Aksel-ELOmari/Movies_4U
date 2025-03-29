@@ -1,0 +1,140 @@
+/*? the search bar styling */
+.SearchBar {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 1.4rem;
+  z-index: 10;
+  /* display: none; */
+}
+.SearchBar form {
+  position: relative;
+  height: 40px;
+  width: 70%;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 30px;
+  box-shadow: 2px 2px 12px -3px #fff;
+  /* overflow: hidden; */
+  margin: 0.6rem auto;
+}
+.selections {
+  height: 100%;
+  width: max-content;
+}
+.SearchBar .Select-box {
+  height: 100%;
+  border: 0;
+  outline: 0;
+  padding: 0 0.4rem;
+  background: orange;
+  font-weight: bold;
+  cursor: pointer;
+}
+.SearchBar form input {
+  background: transparent;
+  padding: 0 20px;
+  color: var(--them-color);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  height: 100%;
+  width: 90%;
+  border: 0;
+  outline: 0;
+}
+.SearchBar form input::placeholder {
+  color: rgba(255, 255, 0, 0.534);
+  font-style: italic;
+  font-size: 15px;
+}
+
+.SearchBar form label {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#searchResults {
+  max-height: 300px;
+  height: 300px;
+  width: 70%;
+  border-radius: 23px;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: max-content;
+  height: fit-content;
+  /* display: none; */
+}
+#searchResults::-webkit-scrollbar {
+  width: 4px;
+  border-radius: 20px;
+  background: #eeee;
+}
+#searchResults::-webkit-scrollbar-thumb {
+  width: 4px;
+  background: orangered;
+  border-radius: 20px;
+}
+#searchResults .SearchMovieCard {
+  min-height: 45px;
+  width: 80%;
+  max-width: 100%;
+  padding: 0 0.4rem;
+  text-decoration: none;
+  margin: 0.3rem 0;
+  color: #000;
+  display: flex;
+  align-items: center;
+  gap: 1.3rem;
+  -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(30px);
+}
+#searchResults .SearchMovieCard img {
+  height: 40px;
+  width: 34px;
+  border-radius: 0;
+}
+#searchResults .SearchMovieCard h4 {
+  font-style: italic;
+  text-shadow: 2px 2px 12px #000;
+  color: orange;
+}
+#searchResults .SearchMovieCard .MovieNum {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+#searchResults .SearchMovieCard .MovieNum .Movie-Rate {
+  display: flex;
+}
+
+/*? the search bar styling Ends */
+
+@media screen and (max-width: 678px) {
+  #searchResults .SearchMovieCard .MovieNum .Movie-Genre,
+  #searchResults .SearchMovieCard .MovieNum .Movie-Comp,
+  #searchResults .SearchMovieCard .MovieNum .Movie-Dur,
+  #searchResults .SearchMovieCard .MovieNum .Movie-Type {
+    display: none;
+  }
+  #searchResults .SearchMovieCard h4 {
+    word-break: keep-all;
+    --max-lines: 1;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: var(--max-lines);
+  }
+}

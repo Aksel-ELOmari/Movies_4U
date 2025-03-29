@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="keyword"
+      content="watch movies, movies online, watch TV, TV online, TV shows online, watch TV shows, stream movies, stream tv, instant streaming, watch online, movies, watch movies Morocco, watch TV online, no download, full length movies"
+    />
+    <meta
+      name="description"
+      content="Watch Netflix movies & TV shows online or stream right to your smart TV, game console, PC, Mac, mobile, tablet and more.
+        Movies is universal search & discovery for any TV Show & Movie across Netflix, Hulu, Amazon, and hundreds of other providers in one place."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font-awesome cli  -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" type="text/css" href="./Styles/index.css" />
+    <link rel="stylesheet" type="text/css" href="./Styles/search.css" />
+
+    <title>Movies_4U</title>
+  </head>
+  <body dir="ltr">
+    <header>
+      <nav>
+        <a href="./index.html" class="logo"
+          ><h1>Movies<b>_4U</b></h1></a
+        >
+        <div class="nav-links">
+          <ul>
+            <li class="nav-link-item" class="active">
+              <a href="./index.html">Home</a>
+            </li>
+            <li class="nav-link-item"><a href="./Series.html">Series</a></li>
+            <li class="nav-link-item"><a href="./contact.html">Contact</a></li>
+            <li class="nav-link-item nav-Sing-btn active">
+              <a target="_blank" href="./Regester.html">Sing up</a>
+            </li>
+            <div class="hidenavBar_btn" onclick="toggleMenu()">
+              <i class="fa-solid fa-x"></i>
+            </div>
+          </ul>
+        </div>
+        <div
+          class="d-flex"
+          style="display: flex; align-items: center; gap: 0.8rem"
+        >
+          <a href="./Search.html" title="link" class="btnsearch">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </a>
+          <!-- the user cover img -->
+          <div title="to the dashboard" class="navUser-img">
+            <img
+            loading="lazy" 
+              src="./SRC/image/user.jpg"
+              width="35px"
+              class="User_img"
+              alt=""
+            />
+          </div>
+          <div class="nav_profile_after  --blur-class d-none">
+              <h3 class="colored user_name">Ayoub El Omari</h3>
+              <u class="email">ayoubomarii1220@gmail.com</u>
+              <button type="button" class="prof-after-link text-center btn logout-btn">logout</button>
+          </div>
+          <!-- the user cover img -->
+        </div>
+        <div class="navbar align-center justify-center">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </nav>
+      <div class="SearchBar">
+        <form id="searchBox" action="post">
+          <div class="selections d-flex align-itemscenter gap-1">
+            <!-- Select the genre -->
+            <select
+              name="genre"
+              class="Select-box"
+              id="genre-select"
+              title="slc"
+            >
+              <option selected>Genres</option>
+              <option class="genre-opt" value="28" id="28">Action</option>
+              <option class="genre-opt" value="12" id="12">Adventure</option>
+              <option class="genre-opt" value="16" id="16">Animation</option>
+              <option class="genre-opt" value="35" id="35">Comedy</option>
+              <option class="genre-opt" value="80" id="80">Crime</option>
+              <option class="genre-opt" value="99" id="99">Family</option>
+              <option class="genre-opt" value="14" id="14">Fantasy</option>
+              <option class="genre-opt" value="36" id="36">History</option>
+              <option class="genre-opt" value="27" id="27">Horror</option>
+              <option class="genre-opt" value="10402" id="10402">Music</option>
+              <option class="genre-opt" value="9648" id="9648">Mystery</option>
+              <option class="genre-opt" value="10749" id="10749">
+                Romance
+              </option>
+              <option class="genre-opt" value="878" id="878">
+                Science Fiction
+              </option>
+              <option class="genre-opt" value="53" id="53">Thriller</option>
+              <option class="genre-opt" value="10752" id="10752">War</option>
+              <option class="genre-opt" value="37" id="37">Western</option>
+            </select>
+            <!-- select the media type -->
+            <select
+              name="media"
+              class="Select-box"
+              id="media-select"
+              title="slc"
+            >
+              <option value="movie" class="media-opt" selected>Type</option>
+              <option value="movie" class="media-opt" id="movie">Movies</option>
+              <option value="tv" class="media-opt" id="tv">Series</option>
+            </select>
+          </div>
+          <input
+            title="input"
+            type="text"
+            name="SearchValue"
+            id="searchInput"
+          />
+          <label for="searchInput" class="active search-btn">Search</label>
+        </form>
+        <div id="searchResults" class="scroller-y d-none"></div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section id="Search__Results">
+        <div class="">
+          <div class="countainer-inner"></div>
+          <div
+            class="show-more-btn d-flex align-items-center justify-content-center"
+          >
+            <button class="btn-lg bg-colored" type="button">
+              More Results
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div class="to-top-btn">
+      <a
+        href="#"
+        title="to top"
+        class="Y-scroll-btn d-flex align-tems-center justify-content-center"
+        ><i class="fa-solid fa-chevron-right"></i
+      ></a>
+    </div>
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-Col">
+          <a href="#" class="footerlogo logo"
+            ><h1>Movies<b>_4U</b></h1></a
+          >
+          <div class="footerSitedes">
+            Movies_4U is the best free streaming Movies website 2024. where you
+            can match movies / TvShoes/ Anime / Animation online for free. no
+            regestration required with a large database and great features.
+            we're confident that Movies_4U is the best free online movie site in
+            the space you just can't mess.
+            <br />
+            <p id="CopyRights">
+              All the Rights are seaved from Movies_4U 2024.
+            </p>
+          </div>
+        </div>
+        <div class="footer-Col">
+          <h4>Usefull Links :</h4>
+          <div class="footer-links">
+            <ul>
+              <li><a href="#">Movies</a></li>
+              <li><a href="./anime.html">Anime/Animation</a></li>
+              <li><a href="./Series.html">TV-Shows</a></li>
+              <li><a href="#Popular">Most Watched</a></li>
+            </ul>
+            <ul>
+              <li><a href="./contact.html">Contact us</a></li>
+              <li><a href="#">Terms of Service</a></li>
+            </ul>
+            <div class="footer-links">
+              <a href="">
+                <i class="fa-solid fa-user"></i>
+              </a>
+              <a href="">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a href="">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="./Scripts/index.js"></script>
+    <script type="module" src="./Scripts/fetcher.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1076 @@
+html,
+* {
+  margin: 0;
+  padding: 0;
+  transition: 0.3s;
+  scroll-behavior: smooth;
+  font-family:var(--f-family-Gill-Sans);
+}
+/* --------- Global Classes // Styles--------- */
+:root {
+  --them-color: #fff;
+  --Cover-color: #000;
+  --blue-color: #0000ff;
+  --favourite-color: orangered;
+  --PrineryFavourite-color: orange;
+  --warnning-color:yellow;
+  --heigher-zindex: 99;
+  --heigh-zindex: 10;
+  --law-zindex: 1;
+  --underlaw-zindex: -1;
+  --blur-class: blur(20px);
+  --f-family-Funnel-Sans: "Funnel Sans", serif;
+  --f-family-Gill-Sans:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/* GOOGLE FONTS STYLES */
+/* <uniquifier>: Use a unique and descriptive class name */
+/* <weight>: Use a value from 300 to 800 */
+/* the user nav profile */
+.nav_profile_after
+{
+  position: absolute;
+  top: 3.5rem;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-evenly !important;
+  flex-direction: column !important;
+  transform: translateX(10%);
+  height: 10rem;
+  min-width: 7rem;
+  max-width: fit-content;
+  border-radius: .6rem;
+  background: #2b2a2a9c;
+  border: solid 1px #fff;
+  padding: .2rem .5rem;
+  /* display: none !important; */
+}
+.funnel-sans-Funnel-Sans/* <uniquifier>*/ {
+  font-family: "Funnel Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 600; /* <weight>*/
+  font-style: normal;
+}
+.position-relative{position: relative !important;}
+/* --------------------  GAPS --------------------*/
+.gap-1 {
+  gap: 0.1em !important;
+}
+.gap-2 {
+  gap: 0.2em !important;
+}
+.gap-3 {
+  gap: 0.3em !important;
+}
+.gap-4 {
+  gap: 0.4em !important;
+}
+.gap-5 {
+  gap: 0.5em !important;
+}
+.gap-6 {
+  gap: 0.6em !important;
+}
+.gap-7 {
+  gap: 0.7em !important;
+}
+.gap-8 {
+  gap: 0.8em !important;
+}
+.gap-9 {
+  gap: 0.9em !important;
+}
+.gap-10 {
+  gap: 0.1em !important;
+}
+/*? margins*/
+.m-auto {
+  margin: auto;
+}
+.mx-1 {
+  margin: 0 0.1rem !important;
+}
+.mx-2 {
+  margin: 0 0.2rem !important;
+}
+.mx-3 {
+  margin: 0 0.3rem !important;
+}
+.mx-4 {
+  margin: 0 0.4rem !important;
+}
+.mx-5 {
+  margin: 0 0.5rem !important;
+}
+.mx-6 {
+  margin: 0 0.6rem !important;
+}
+.mx-7 {
+  margin: 0 0.7rem !important;
+}
+.mx-8 {
+  margin: 0 0.8rem !important;
+}
+.mx-9 {
+  margin: 0 0.9rem !important;
+}
+.mx-10 {
+  margin: 0 0.1rem !important;
+}
+
+.my-1 {
+  margin: 0.1rem 0 !important;
+}
+.my-2 {
+  margin: 0.2rem 0 !important;
+}
+.my-3 {
+  margin: 0.3rem 0 !important;
+}
+.my-4 {
+  margin: 0.4rem 0 !important;
+}
+.my-5 {
+  margin: 0.5rem 0 !important;
+}
+.my-6 {
+  margin: 0.6rem 0 !important;
+}
+.my-7 {
+  margin: 0.7rem 0 !important;
+}
+.my-8 {
+  margin: 0.8rem 0 !important;
+}
+.my-9 {
+  margin: 0.9rem 0 !important;
+}
+.my-10 {
+  margin: 0.1rem 0 !important;
+}
+.py-height {
+  margin: 1rem 0 !important;
+}
+.px-height {
+  margin: 0 1rem !important;
+}
+/*? paddings */
+.px-1 {
+  padding: 0 0.1rem !important;
+}
+.px-2 {
+  padding: 0 0.2rem !important;
+}
+.px-3 {
+  padding: 0 0.3rem !important;
+}
+.px-4 {
+  padding: 0 0.4rem !important;
+}
+.px-5 {
+  padding: 0 0.5rem !important;
+}
+.px-6 {
+  padding: 0 0.6rem !important;
+}
+.px-7 {
+  padding: 0 0.7rem !important;
+}
+.px-8 {
+  padding: 0 0.8rem !important;
+}
+.px-9 {
+  padding: 0 0.9rem !important;
+}
+.px-10 {
+  padding: 0 0.1rem !important;
+}
+
+.py-1 {
+  padding: 0.1rem 0 !important;
+}
+.py-2 {
+  padding: 0.2rem 0 !important;
+}
+.py-3 {
+  padding: 0.3rem 0 !important;
+}
+.py-4 {
+  padding: 0.4rem 0 !important;
+}
+.py-5 {
+  padding: 0.5rem 0 !important;
+}
+.py-6 {
+  padding: 0.6rem 0 !important;
+}
+.py-7 {
+  padding: 0.7rem 0 !important;
+}
+.py-8 {
+  padding: 0.8rem 0 !important;
+}
+.py-9 {
+  padding: 0.9rem 0 !important;
+}
+.py-10 {
+  padding: 0.1rem 0 !important;
+}
+/* --------------------  GAPS --------------------*/
+.no-scrollbar::-webkit-scrollbar {
+  display: none !important;
+}
+.scroller-y::-webkit-scrollbar {
+  background: transparent;
+  width: 6px;
+  border-radius: 20px;
+}
+.scroller-y::-webkit-scrollbar-thumb {
+  background: var(--favourite-color);
+  width: 6px;
+  border-radius: 20px;
+}
+.scroller-x::-webkit-scrollbar {
+  background: transparent;
+  height: 6px;
+  border-radius: 20px;
+}
+.scroller-x::-webkit-scrollbar-thumb {
+  background: var(--favourite-color);
+  height: 6px;
+  border-radius: 20px;
+}
+.colored {
+  color: var(--PrineryFavourite-color) !important;
+}
+.fa,
+.fa-solid {
+  color: orange;
+  cursor: pointer;
+  margin: 0 0.7rem;
+}
+.fa:hover,
+.onfire {
+  color: var(--favourite-color);
+}
+.fa-star {
+  color: var(--warnning-color) !important;
+}
+.show {
+  display: block;
+}
+.show-more-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.1rem auto !important;
+  width: 100% !important;
+}
+.show-more-btn button {
+  padding: 0.7rem 1rem;
+  border-radius: 20px;
+  width: 100% !important;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.disabled {
+  visibility: 0.2 !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+}
+.d-none {
+  display: none !important;
+}
+.d-flex,
+.align-items-center {
+  display: flex !important;
+  align-items: center !important;
+}
+.justify-content {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.justify-content-evenly{justify-content: space-evenly !important;}
+.justify-content-between{justify-content: space-between !important;}
+.flex-column{flex-direction: column !important;}
+.d-block {
+  display: block !important;
+}
+.text-center{text-align: center !important;}
+.CarouselSlider {
+  width: 98% !important;
+}
+.container {
+  max-width: 98% !important;
+  margin: auto !important;
+}
+.active a {
+  background: orangered !important;
+  color: #000 !important;
+  box-shadow: 2px 2px 12px -3px #fff !important;
+  box-shadow: inset 2px 2px 12px #000 !important;
+  border-radius: 20px !important;
+}
+.spans {
+  display: flex;
+  gap: 4px;
+  margin: 10px auto;
+  width: 500px;
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+.--blur-class {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+a {
+  text-decoration: none;
+  color: var(--them-color) !important;
+}
+a:hover {
+  text-decoration: none !important;
+  color: var(--blue-color) !important;
+}
+.bg-colored,
+.lg-btn,
+.btn,
+.active,
+.bubble {
+  border-radius: 20px !important;
+  border-radius: 0.4rem;
+  background: var(--favourite-color) !important;
+  color: #000 !important;
+  box-shadow: 2px 2px 12px -3px #fff !important;
+  box-shadow: inset 2px 2px 12px #000 !important;
+  border: 0;
+  cursor: pointer;
+}
+.btn,
+.lg-btn {
+  padding: 12px 20px;
+}
+
+/* --------- Global Classes // Styles--------- */
+.cursor-pointer {
+  cursor: pointer !important;
+}
+.pagination-holder {
+  display: flex !important;
+  align-items: center !important;
+  flex-direction: row !important;
+  margin: 1rem auto !important;
+  width: max-content !important;
+  gap: 0.3rem !important;
+}
+.pagination-holder .pagi-item {
+  padding: 0.4rem !important;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 50% !important;
+  background-color: #fff !important;
+  color: #000 !important;
+}
+.pagination-holder .pagi-item.main {
+  font-weight: bold;
+  background: var(--favourite-color) !important;
+  padding: 1rem !important;
+}
+body {
+  min-height: 100vh;
+  background: var(--Cover-color);
+  color: var(--them-color);
+  font-family: sans-serif;
+  overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+  width: 8px;
+  border-radius: 20px;
+  background: transparent;
+}
+body::-webkit-scrollbar-thumb {
+  width: 8px;
+  border-radius: 20px;
+  background: var(--favourite-color);
+}
+section {
+  margin: 10px 0;
+}
+.section-header {
+  flex-wrap: wrap;
+}
+.section-header,
+.section-header ul{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.section-header ul li {
+  list-style: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.section-header ul li:hover {
+  color: var(--Cover-color);
+  background: var(--them-color);
+}
+#latest {
+  padding: 1rem 0.5rem;
+}
+section .CarouselSlider {
+  margin-left: 50%;
+  width: 96%;
+}
+
+.MovieSectionAlt {
+  color: var(--PrineryFavourite-color);
+  margin: 10px 0;
+}
+.navUser-img img{
+  position: relative;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  border: solid 2px orange;
+  overflow: hidden;
+  cursor: pointer;
+  object-fit: cover;
+}
+.navUser-img img:hover {
+  border: solid 2px var(--favourite-color);
+}
+.header--before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 200vh;
+  width: 100%;
+  background: linear-gradient(to top, #000, transparent);
+  z-index: -1;
+}
+#headerCover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+  object-fit: cover;
+}
+nav {
+  padding: 1rem 0.4rem;
+  z-index: 20;
+}
+nav,
+nav ul {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+nav li {
+  list-style: none;
+  margin: 0 0.6rem;
+}
+.logo b {
+  color: var(--favourite-color);
+  font-weight: 500;
+  font-style: oblique;
+}
+.MoviePreviewTags a,
+.nav-link-style {
+  padding: 8px 18px;
+  border-radius: 20px;
+  border: solid 1px var(--them-color);
+}
+nav li a {
+  font-weight: bolder;
+  padding: 8px 18px;
+  border-radius: 20px;
+}
+nav li a:hover {
+  background: var(--favourite-color);
+  border: solid 1px var(--them-color);
+}
+header nav ul .ul--before {
+  display: none;
+}
+#nav-SearchBtn {
+  cursor: pointer;
+  z-index: 4;
+}
+
+.User_img:hover+.nav_profile_after{display: flex !important;}
+.nav_profile_after:hover{display: flex !important;}
+.prof-after-link
+{
+  width: 100%;
+  color: #000;
+  padding: .4rem 0;
+}
+.prof-after-link:hover{background: orangered;}
+
+/* scrooll to the top btn-pg */
+.Y-scroll-btn {
+  position: fixed;
+  bottom: 0.2rem;
+  right: 0.2rem;
+  height: 40px;
+  width: 40px;
+  background: var(--warnning-color);
+  border-radius: 50%;
+  rotate: -90deg;
+  font-weight: bolder;
+  z-index: 10;
+}
+.Y-scroll-btn:hover {
+  border: solid 2px var(--favourite-color);
+}
+
+.MorerelatedContent h2 {
+  margin-left: 5rem;
+}
+.toggler-bar-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+.toggler-bar-btn button {
+  padding: 0.6rem;
+  border-radius: 50%;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+iframe {
+  translate: 0 -30px;
+}
+
+/* Start styling the countainer that hodes the movie's cards */
+.MoviesContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  padding: 2rem 0;
+  margin-top: 7rem;
+}
+
+#MoviePreviewName {
+  margin-bottom: 20px;
+  color: var(--favourite-color);
+  font-size: 30px;
+  width: 500px;
+  max-width: 100%;
+}
+
+#MP-Preview {
+  width: 400px;
+  translate: -10px 0;
+  padding-right: 10px;
+  max-width: 100%;
+  max-height: 200px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+#MoviePreviewName::-webkit-scrollbar,
+#MP-Preview::-webkit-scrollbar {
+  width: 8px;
+  background: var(--Cover-color);
+  border-radius: 30px;
+}
+#MoviePreviewName::-webkit-scrollbar-thumb,
+#MP-Preview::-webkit-scrollbar-thumb {
+  background-color: var(--favourite-color);
+  border-radius: 30px;
+}
+.MoviesDethails {
+  padding-left: 2.3rem;
+}
+.MoviesRates,
+.MoviePreviewTags {
+  margin: 20px 0;
+}
+.MoviePreviewTags {
+  display: flex;
+  flex-wrap: wrap;
+  width: 400px;
+  max-width: 90%;
+  align-items: center;
+}
+.MoviesRates span {
+  margin: 0 0.5rem;
+}
+.MoviesRates span:nth-child(4) {
+  color: var(--warnning-color);
+  font-weight: 400;
+}
+.MoviesRates span:nth-child(5) {
+  text-decoration: underline red;
+  font-weight: 400;
+}
+
+.MoviePreviewButtons {
+  flex-wrap: wrap;
+  margin: 30px;
+}
+.MoviePreviewButtons .button {
+  border: 0;
+  outline: 0;
+  padding: 13px 20px;
+  border-radius: 30px;
+  background: var(--favourite-color);
+  margin: 0 0.3rem;
+  font-weight: bold;
+  box-shadow: inset 2px 2px 12px #000;
+  cursor: pointer;
+}
+
+.MoviePreviewPoster img {
+  height: 19rem;
+  width: 12rem;
+  border-radius: 12px;
+}
+
+/* Start styling the countainer that holdes the movie's cards */
+
+/* ? Start styling the Carousel slider  */
+
+.CarouselSlider {
+  position: relative;
+  height: max-content;
+  width: 90%;
+  border-radius: 12px;
+  margin: auto;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.CarouselSlider-btns {
+  width: 98%;
+  margin: auto;
+  height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  left: 1%;
+  top: 50%;
+  translate: 0 -50%;
+}
+.CarouselSlider-btns button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #eee4;
+  border: none;
+  color: #fff;
+  font-family: monospace;
+  font-weight: bold;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.CarouselSlider-btns button:hover {
+  background-color: #fff;
+  color: #000;
+}
+.CarouselSlider-inner {
+  height: max-content;
+  width: 100%;
+  padding: 2rem 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+section .CarouselSlider-inner::-webkit-scrollbar {
+  height: 4px;
+  background: transparent;
+  border-radius: 20px;
+}
+section .CarouselSlider-inner::-webkit-scrollbar-thumb {
+  height: 4px;
+  background: var(--favourite-color);
+  border-radius: 20px;
+}
+.CarouselSlider-inner .CarouselCard {
+  width: 160px;
+  height: 260px;
+  flex-shrink: 0;
+  position: relative;
+  cursor: pointer;
+}
+.CarouselSlider-inner .CarouselCard:hover {
+  width: 30%;
+  transition: all 0.6s;
+}
+.countainer-inner .CarouselCard .Movie-Type,
+.countainer-inner .CarouselCard .Movie-Genre,
+.countainer-inner .CarouselCard .Movie-Comp,
+.countainer-inner .CarouselCard .Movie-Dur,
+.CarouselSlider-inner .CarouselCard .Movie-Type,
+.CarouselSlider-inner .CarouselCard .Movie-Genre,
+.CarouselSlider-inner .CarouselCard .Movie-Comp,
+.CarouselSlider-inner .CarouselCard .Movie-Dur,
+.CarouselSlider-inner .CarouselCard:hover .MoviePoster,
+.CarouselSlider-inner .CarouselCard .MovieCover,
+.CarouselSlider-btns {
+  display: none;
+}
+.CarouselSlider:hover .CarouselSlider-btns {
+  display: flex;
+}
+.CarouselSlider-inner .CarouselCard:hover .Movie-Type {
+  display: block;
+}
+.CarouselSlider-inner .CarouselCard:hover .Movie-Genre {
+  display: block;
+}
+.CarouselSlider-inner .CarouselCard:hover .Movie-Comp {
+  display: block;
+}
+.CarouselSlider-inner .CarouselCard:hover .Movie-Dur {
+  display: block;
+}
+.CarouselSlider-inner .CarouselCard:hover .MovieCover {
+  display: block;
+}
+
+.CarouselSlider-inner .CarouselCard img {
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+  align-self: center;
+  border-radius: 8px;
+}
+.CarouselSlider-inner .CarouselCard .MovieTitle {
+  --max-lines: 1;
+
+  font-weight: 500;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: var(--max-lines);
+}
+.CarouselSlider-inner .CarouselCard .MovieNum {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.CarouselSlider-inner .CarouselCard .MovieNum .Movie-Rate {
+  color: var(--warnning-color);
+}
+
+/* * End styling the Carousel slider  */
+/* ? Start styling the Countainer section  */
+.countainer-inner {
+  text-align: left;
+  padding-left: 0.9rem;
+}
+.countainer-inner .CarouselCard {
+  width: 170px;
+  height: 260px;
+  flex-shrink: 0;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0.3rem;
+}
+.countainer-inner .CarouselCard img {
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+  align-self: center;
+  border-radius: 8px;
+}
+.CarouselCard .MovieCover {
+  display: none;
+}
+.countainer-inner .CarouselCard .MovieTitle {
+  --max-lines: 1;
+  font-weight: 500;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: var(--max-lines);
+}
+.countainer-inner .CarouselCard .MovieNum {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.countainer-inner .CarouselCard .MovieNum .Movie-Rate {
+  color: var(--warnning-color);
+}
+/* ? End styling the Countainer section  */
+
+section .CarouselSlider {
+  border: 0;
+  margin: 30px 0;
+}
+#otherCategories .CarouselSlider-inner {
+  gap: 1rem;
+  padding: 0.7rem 0.5rem;
+}
+#otherCategories img {
+  box-shadow: 2px 2px 0px 3px var(--warnning-color);
+  border-radius: 10px;
+  filter: grayscale(100%);
+  transition: 0.5s;
+}
+#otherCategories img:hover {
+  box-shadow: 2px 2px 0px 3px var(--warnning-color);
+  border-radius: 10px;
+  filter: grayscale(0%);
+}
+#otherCategories h3 {
+  margin-top: 0.6rem;
+}
+
+/* Start styling the footer section */
+footer {
+  padding: 4rem;
+}
+.footer-inner,
+.footer-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.footer-links {
+  gap: 3rem;
+}
+.footer-links ul li {
+  list-style: none;
+}
+.footerSitedes {
+  margin: 0 1rem;
+  max-width: 100%;
+}
+
+.footer-Col h4,
+.footer-Col h1 {
+  margin: 20px 0;
+}
+#CopyRights {
+  margin-top: 30px;
+}
+
+.SearchMovieCard {
+  z-index: 10;
+}
+/* styling the overly  */
+.small_btn {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #eeee;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s linear;
+  padding: 0.5rem;
+  margin: 0.6rem;
+  cursor: pointer;
+}
+.small_btn:hover {
+  color: orangered;
+  background: transparent;
+}
+.x-btn,
+.OverlyHide-btn:hover {
+  color: var(--favourite-color);
+}
+#overfly {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #000;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+#overfly .Videos-inner {
+  overflow-x: auto;
+  overflow-y: hidden;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+#overfly .Videos-inner .Video-item {
+  height: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* border: solid 2px red; */
+  order: hidden;
+}
+#overfly .Videos-inner .video-title {
+  color: var(--favourite-color);
+  margin-left: 4rem;
+}
+#overfly .Videos-inner iframe {
+  height: 80%;
+  width: 90%;
+  max-width: 100%;
+  border-radius: 20px;
+  border: solid 2px var(--warnning-color);
+  margin: auto;
+}
+/* end the overly */
+
+/* End styling the footer section */
+
+@media screen and (max-width: 678px) {
+  .CarouselSlider-inner .CarouselCard:hover {
+    width: 160px;
+    height: 260px;
+    flex-shrink: 0;
+    position: relative;
+    cursor: pointer;
+  }
+  .MoviesContainer {
+    flex-direction: column;
+    padding: 2rem 0;
+  }
+  #MoviePreviewName,
+  .MoviesData h4 {
+    width: 80%;
+    margin: auto;
+  }
+  .MoviesDethails {
+    width: 100%;
+    text-align: center;
+  }
+  #MP-Preview {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+  }
+  .countainer-inner {
+    text-align: center;
+    /* text-align:left; */
+  }
+  .footer-inner {
+    flex-direction: column;
+  }
+  .footer-Col h1,
+  .footer-Col h4 {
+    width: 100%;
+    text-align: center;
+    /* background: red; */
+  }
+  #Projecter .main-preview {
+    width: 100%;
+  }
+  .nav-details {
+    bottom: 40%;
+    left: 0%;
+  }
+  .nav-details p {
+    height: 100px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  .container {
+    width: 100%;
+  }
+  .Overview {
+    text-align: center;
+    width: 400px;
+  }
+}
+
+.navbar,
+.hidenavBar_btn {
+  display: none;
+}
+@media screen and (max-width: 678px) {
+  .RegesterCard .main-card {min-width: 70% !important;}
+  .footer-links {align-items: start !important;}
+  .CarouselSlider-inner .CarouselCard:hover .Movie-Type,
+  .CarouselSlider-inner .CarouselCard:hover .Movie-Genre,
+  .CarouselSlider-inner .CarouselCard:hover .Movie-Comp,
+  .CarouselSlider-inner .CarouselCard:hover .Movie-Dur,
+  .CarouselSlider-btns,
+  .btn-pg {
+    display: none;
+  }
+  .navbar,
+  #X-BTN {
+    cursor: pointer;
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    font-size: 20px;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    z-index: 10000;
+  }
+  .hidenavBar_btn {
+    padding: 0.5rem 0.7rem;
+    background: rgba(102, 102, 20, 0.479);
+    border-radius: 50%;
+    cursor: pointer;
+    position: fixed;
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+  .navbar:hover,
+  .hidenavBar_btn:hover {
+    background: orange;}
+  header nav ul {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    background: #000;
+    z-index: 10000;
+    display: none;
+  }
+  .navbar:hover + header nav ul {
+    display: flex;
+  }
+}
+
+.hide-overly-btn {
+  height: 30px;
+  width: 30px;
+  margin: 0.8rem;
+  border-radius: 50%;
+  background: rgb(102, 102, 36);
+  color: #000;
+  transition: 0.3s;
+  font-weight: bolder;
+}
+.hide-overly-btn:hover {
+  background: orange;
+}
+
+@media (max-width: 370px) {
+  .CarouselSlider-inner .CarouselCard,
+  .Card,
+  .card,
+  .MovieCard,
+  .movie-card {
+    max-height: 9rem !important;
+    max-width: 6rem !important;
+  }
+  .RegesterCard .main-card {min-width: 80% !important;}
+
+}

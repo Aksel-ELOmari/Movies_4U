@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "firebase": "^11.1.0",
+    "prettier": "^3.4.2"
+  },
+  "name": "movie_4u",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write .",
+    "start":"react-scripts start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

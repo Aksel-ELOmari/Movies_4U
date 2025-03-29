@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" type="text/css" href="./Styles/index.css" />
+        <link rel="stylesheet" type="text/css" href="./Styles/main_card.css" />
+        <!-- Firebase SDK  -->
+        <script
+          defer
+          type="module"
+          src="https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js"
+        ></script>
+        <script
+          defer
+          type="module"
+          src="https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js"
+        ></script>
+        <title>Contact Movies_4U</title>
+      </head>
+      <body dir="">
+        <header>
+          <nav>
+            <a href="./index.html" class="logo"
+              ><h1>Movies<b>_4U</b></h1></a
+            >
+            <div class="nav-links">
+              <ul>
+                <li class="nav-link-item"><a href="./index.html">Home</a></li>
+                <li class="nav-link-item"><a href="./Series.html">Series</a></li>
+                <li class="nav-link-item active"><a href="./contact.html">contact</a></li>
+                <li class="nav-link-item nav-Sing-btn active">
+                  <a href="./Regester.html">Sing up</a>
+                </li>
+                <li class="ul--before">X</li>
+              </ul>
+            </div>
+            <div
+              class="flex"
+              style="display: flex; align-items: center; gap: 0.8rem"
+            >
+              <a href="./Search.html" title="link" class="btnsearch">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </a>
+              <!-- the user cover img -->
+              <div title="to the dashboard" class="navUser-img">
+                <img
+                loading="lazy" 
+                  src="./SRC/image/user.jpg"
+                  width="35px"
+                  class="User_img"
+                  alt=""
+                />
+              </div>
+              <div class="nav_profile_after --blur-class d-none">
+                  <h3 class="colored user_name">Ayoub El Omari</h3>
+                  <u class="email">ayoubomarii1220@gmail.com</u>
+                  <button type="button" class="prof-after-link text-center btn logout-btn">logout</button>
+              </div>
+              <!-- the user cover img -->
+            </div>
+          </nav>
+          <div><img src="./SRC/image/bg.jpg" id="headerCover" alt="" /></div>
+          <div class="header--before"></div>
+        </header>
+
+        <section class="main-section">
+            <div
+              class="RegesterCard h-100 w-100 d-flex align-items-center justify-content-center"
+            >
+              <div class="main-card">
+                <h2 class="colored text text-center form-alt">
+                  Contact Movie_4U
+                </h2>
+                <form
+                  action="#"
+                  id="regester_form"
+                  onsubmit="return false"
+                >
+                  <div class="form-group my-2 email-group">
+                    <label for="user_email">Email :</label><br />
+                    <input
+                      autocomplete="username@gmail.com"
+                      placeholder="Email @"
+                      type="email"
+                      class="px-5"
+                      name="user_email"
+                      id="user_email"
+                    />
+                  </div>
+                  <div class="form-group my-2 message-group">
+                    <label for="user_message">message :</label><br />
+                    <input type="text" title="user message" class="px-5"
+                        name="user_message" id="user_message"
+                        placeholder="enter your message">
+                    </input>
+                  </div>
+                  <div class="my-9 w-100">
+                    <input
+                      type="submit"
+                      value="submit"
+                      id="submit_btn"
+                      class="fw-bold cursor-pointer"
+                    />
+                  </div>
+                </form>
+                <hr class="w-100 colored">
+                <div class="form-group my-2 check-group">
+                    <input type="checkbox" checked title="stay on updates !!!" name="user_nots" id="user_nots">
+                    <label for="user_nots" class="colored cursor-pointer">Stay On Updates.</label>
+                  </div>
+              </div>
+            </div>
+          </section>
+
+        <script type="module" src="./Scripts/index.js"></script>
+        <!--------------------- firebase  ------------------->
+        <script type="module" src="./Scripts/firebase/main.js"></script>
+      </body>
+    </html>
+    

@@ -1,0 +1,98 @@
+:root {
+    --them-color: #fff;
+    --Cover-color: #000;
+    --blue-color: #0000ff;
+    --favourite-color: orangered;
+    --PrineryFavourite-color: orange;
+    --warnning-color:yellow;
+    --heigher-zindex: 99;
+    --heigh-zindex: 10;
+    --law-zindex: 1;
+    --underlaw-zindex: -1;
+    --blur-class: blur(20px);
+    --f-family-Funnel-Sans: "Funnel Sans", serif;
+    --f-family-Gill-Sans:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+
+.text-center {
+  text-align: center !important;
+}
+.RegesterCard {
+  position: relative !important;
+}
+.main-card {
+  position: absolute !important;
+  top: 70% !important;
+  left: 50% !important;
+  translate: -50% 0% !important;
+  padding: 2rem !important;
+  border: solid 2px #fff !important;
+  border-radius: 20px !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  background: #2b2a2a9c !important;
+  line-height: 2rem !important;
+  
+}
+.form-group {
+  width: 100% !important;
+}
+.form-group input::placeholder {
+  color: var(--PrineryFavourite-color) !important;
+}
+.form-group input:focus {
+  border: 1px solid var(--PrineryFavourite-color) !important;
+}
+.form-group input {
+  border: 1px solid #fff !important;
+  outline: 0 !important;
+  width: 100% !important;
+  height: 3rem !important;
+  border-radius: 2rem !important;
+  background: transparent !important;
+  color: #fff !important;
+}
+.check-group {
+  border: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.4rem !important;
+  white-space: nowrap !important;
+}
+.check-group input {
+  height: 1rem !important;
+}
+.check-group label {
+  font-size: 1rem !important;
+}
+input[type="submit"] {
+  width: 100% !important;
+  height: 3rem !important;
+  border-radius: 2rem !important;
+  margin: 0.2rem 0 !important;
+  color: #000 !important;
+  background: var(--PrineryFavourite-color) !important;
+  border: 0 !important;
+  outline: 0 !important;
+  font-weight: bold !important;
+}
+input[type="submit"]:hover {
+  background: var(--favourite-color) !important;
+}
+.google-btn:hover
+{
+  background:transparent !important ;
+  color:lightblue !important;
+  box-shadow: inset 0px .3rem  20px rgb(0, 68, 255)  !important ;
+  transition: ease-in-out .4s !important;
+}
+.google-btn
+{
+  background:transparent !important;
+  border-radius: 20px !important;
+  box-shadow: inset 0px .3rem  20px var(--warnning-color)!important; /* 0d4d81d3 */
+  width: 100% !important ;
+  padding: .6rem .5rem !important;
+}
